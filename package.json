@@ -1,6 +1,6 @@
 {
   "name": "sekreter-portfolio",
-  "homepage": "https://noahsekreter.github.io/sekreter-portfolio/",
+  "homepage": "https://noahsekreter.github.io/sekreter-portfolio/index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
