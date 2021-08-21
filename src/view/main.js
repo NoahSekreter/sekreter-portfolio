@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 // Import assets
 import ResumePDF from '../assets/Sekreter Resume 2021.pdf';
-import ResumeDOC from '../assets/Sekreter Resume 2021.DOCX';
+import ResumeDOC from '../assets/Sekreter Resume 2021.docx';
 import Headshot from '../assets/headshot.jpg';
 
 // Set up the main body of the page
