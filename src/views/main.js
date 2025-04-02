@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
 
 // Import assets
-import ResumePDF from '../assets/Sekreter Resume 2021.pdf';
-import ResumeDOC from '../assets/Sekreter Resume 2021.docx';
+import ResumePDF from '../assets/SekreterResume2025.pdf';
 import Headshot from '../assets/headshot.jpg';
 
 // Set up the main body of the page
@@ -15,10 +14,10 @@ function Main() {
                     <h1>NOAH SEKRETER</h1>
                     <h2>WEB & SOFTWARE DEVELOPER</h2>
                     <div id="scroller">
-                        <span>HTML5, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, C#, MVC, ASP.NET, mySQL, Python -&nbsp;</span>
+                        <span>HTML5, Twig/Timber, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, Drupal, Wordpress, C#, MVC, ASP.NET, mySQL, Python, Storybook, Webpack, Vite, ESLint -&nbsp;</span>
                     </div>
                     <a href="#about" className="button" style={{ marginRight: 10 }}>ABOUT</a>
-                    <a href={ResumePDF} className="button">RESUME</a>
+                    <a href={ResumePDF} className="button" rel="noreferrer" target="_blank">RESUME</a>
                 </div>
             </section>
 
@@ -29,19 +28,17 @@ function Main() {
                 </div>
                 <div className="summary">
                     <div className="summary-text">
+                        <p><strong>Current Career Status:</strong> Available for employment, looking for a Web Developer position in the Chicago area.</p>
                         <p>German born and living in America for nearly 20 years, I began my programming career as an intern at Stream-9, a Cleveland-based website development company.
                             After my time at Stream-9 I have attented a 6 month intensive coding bootcamp called WeCan{'{Code}'}It, where I learned full-stack development and the ASP.NET framework.
-                            Throughout my career, I have self-taught various languages to improve my skills as a developer and slowly master the artform that is programming.<br />
-                            I am currently looking for a web / software development position in the Chicago area.
+                            Afterwards, I have spent a period of time in data-entry, followed by self-teaching Python in order to automate my workflow and distributing my program within the company
+                            to improve overall company performance. When I was finished with that, I have moved back into the world of Web Development to join the website agency of Sandstorm Design,
+                            located in the Chicago area. From here, I have worked under Drupal, Wordpress, and a few .NET CMS frameworks, developing under an Agile scrum environemnt.<br />
                             If you would like to contact me the best way to do so is through email at <a href="mailto:nsekreter@gmail.com">nsekreter@gmail.com</a>.</p>
                         <div className="button-row">
                             <div className="col">
-                                <a className="button" href="https://github.com/NoahSekreter">Github</a>
-                                <a className="button" href="https://www.linkedin.com/in/sekreter/">LinkedIn</a>
-                            </div>
-                            <div className="col">
-                                <a className="button" href={ResumePDF} download='Sekreter Resume 2021'>Resume (PDF)</a>
-                                <a className="button" href={ResumeDOC} download='Sekreter Resume 2021'>Resume (Word)</a>
+                                <a className="button" rel="noreferrer" target="_blank" href="https://github.com/NoahSekreter">Github</a>
+                                <a className="button" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/sekreter/">LinkedIn</a>
                             </div>
                         </div>
                         <article>

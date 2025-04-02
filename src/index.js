@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 // Importing views
-import Main from './view/main';
-import Nav from './view/nav';
+import Main from './views/main';
+import Nav from './views/nav';
 // Importing CSS
 import './styles/style.css';
 
