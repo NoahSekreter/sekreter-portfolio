@@ -70,7 +70,7 @@ function Main() {
                         <div className="background banner-1"></div>
                         <div className="text">
                             <h3>This Website (2021)</h3>
-                            <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. As of August 2021, this site has been rebuilt utilizing React.</p>
+                            <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. As of August 2021, this site has been built utilizing React.</p>
                             <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, React</b></p><br />
                             <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button">Github Page</a>
                         </div>
@@ -90,7 +90,7 @@ function Main() {
                             <h3>Cleveland Hardware & Forging (2018)</h3>
                             <p>After attending WeCan{'{Code}'}It, I was brought on to Cleveland Hardware to rebuild their old website, including adding a PHP email form to submit quotes.</p>
                             <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, PHP</b></p><br />
-                            <a href="https://clevelandhardware.com/" className="button">Website</a>
+                            <a href="https://clevelandhardware.com/" className="button">Website (No Longer Available)</a>
                         </div>
                     </article>
                 </div>
