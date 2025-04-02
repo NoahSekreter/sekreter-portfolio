@@ -1,24 +1,20 @@
 {
   "files": {
-    "main.css": "/sekreter-portfolio/static/css/main.42900d9a.chunk.css",
-    "main.js": "/sekreter-portfolio/static/js/main.4efe0667.chunk.js",
-    "main.js.map": "/sekreter-portfolio/static/js/main.4efe0667.chunk.js.map",
-    "runtime-main.js": "/sekreter-portfolio/static/js/runtime-main.f1017efd.js",
-    "runtime-main.js.map": "/sekreter-portfolio/static/js/runtime-main.f1017efd.js.map",
-    "static/js/2.4500e28c.chunk.js": "/sekreter-portfolio/static/js/2.4500e28c.chunk.js",
-    "static/js/2.4500e28c.chunk.js.map": "/sekreter-portfolio/static/js/2.4500e28c.chunk.js.map",
+    "main.css": "/sekreter-portfolio/static/css/main.e9058f40.css",
+    "main.js": "/sekreter-portfolio/static/js/main.ce9d2117.js",
+    "static/media/headshot.jpg": "/sekreter-portfolio/static/media/headshot.d00baa12fa149ac3d036.jpg",
+    "static/media/ch-banner.JPG": "/sekreter-portfolio/static/media/ch-banner.0df16dd8873b9c838ed8.JPG",
+    "static/media/portfolio-banner.JPG": "/sekreter-portfolio/static/media/portfolio-banner.8c18c82088c1733a6e9b.JPG",
+    "static/media/lp-banner.JPG": "/sekreter-portfolio/static/media/lp-banner.a038cfc2ff4cf4359976.JPG",
+    "static/media/SekreterResume2025.pdf": "/sekreter-portfolio/static/media/SekreterResume2025.adec677f38a71d149d5b.pdf",
+    "static/media/cenfill-banner.JPG": "/sekreter-portfolio/static/media/cenfill-banner.900758fcec0a3dbbc5eb.JPG",
+    "static/media/webbing.svg": "/sekreter-portfolio/static/media/webbing.7f28b468cd845f3f29dc.svg",
     "index.html": "/sekreter-portfolio/index.html",
-    "static/css/main.42900d9a.chunk.css.map": "/sekreter-portfolio/static/css/main.42900d9a.chunk.css.map",
-    "static/js/2.4500e28c.chunk.js.LICENSE.txt": "/sekreter-portfolio/static/js/2.4500e28c.chunk.js.LICENSE.txt",
-    "static/media/Sekreter Resume 2021.949836dd.docx": "/sekreter-portfolio/static/media/Sekreter Resume 2021.949836dd.docx",
-    "static/media/Sekreter Resume 2021.e90e666d.pdf": "/sekreter-portfolio/static/media/Sekreter Resume 2021.e90e666d.pdf",
-    "static/media/style.css": "/sekreter-portfolio/static/media/webbing.0e26f2d5.svg",
-    "static/media/headshot.d00baa12.jpg": "/sekreter-portfolio/static/media/headshot.d00baa12.jpg"
+    "main.e9058f40.css.map": "/sekreter-portfolio/static/css/main.e9058f40.css.map",
+    "main.ce9d2117.js.map": "/sekreter-portfolio/static/js/main.ce9d2117.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f1017efd.js",
-    "static/js/2.4500e28c.chunk.js",
-    "static/css/main.42900d9a.chunk.css",
-    "static/js/main.4efe0667.chunk.js"
+    "static/css/main.e9058f40.css",
+    "static/js/main.ce9d2117.js"
   ]
 }
