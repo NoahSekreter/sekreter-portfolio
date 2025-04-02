@@ -55,7 +55,7 @@ function Main() {
                         </article>
                     </div>
                     <div className="summary-image">
-                        <img src={Headshot} alt="" /><br />
+                        <img src={Headshot} alt="A headshot of Noah Sekreter, who is in casual business attire with long hair and glasses" /><br />
                     </div>
                 </div>
             </section>
@@ -66,13 +66,31 @@ function Main() {
                     <h2>PROJECTS</h2>
                 </div>
                 <div id="carousel">
+                <article>
+                        <div className="background banner-1"></div>
+                        <div className="text">
+                            <h3>ASPPH (2021, 2025)</h3>
+                            <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
+                            <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS/SASS, JavaScript, PHP, ACF</b></p><br />
+                            <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div className="background banner-1"></div>
+                        <div className="text">
+                            <h3>UNICEF USA (2023-2024)</h3>
+                            <p>Part of a team handling continuous maintenance and improvement, I have handled various Drupal block updates and page hero enhancements</p>
+                            <p><b>Created Using: Drupal, Twig, CSS, SCSS/SASS, JavaScript, jQuery, PHP, YML, Layout Builder</b></p><br />
+                            <a href="https://unicefusa.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit UNICEF USA website">Website</a>
+                        </div>
+                    </article>
                     <article>
                         <div className="background banner-1"></div>
                         <div className="text">
                             <h3>This Website (2021)</h3>
                             <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. As of August 2021, this site has been built utilizing React.</p>
                             <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, React</b></p><br />
-                            <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button">Github Page</a>
+                            <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button" rel="noreferrer" target="_blank"  aria-label="Visit this website's GitHub repo">Github Page</a>
                         </div>
                     </article>
                     <article>
@@ -81,7 +99,7 @@ function Main() {
                             <h3>CenFill (2019)</h3>
                             <p>During my time at BBG, I have taught myself Python in order to automate the company's workflow. I have created a program, which I distributed among the company, that allows a user to automate filling out Excel spreadsheets. Over time, this program evolved to include <a href="https://smartsheet.redoc.ly/">Smartsheets API</a> and <a href="https://developer.cms.gov/marketplace-api/">Marketplace API</a> integration.</p>
                             <p><b>Created Using: Python, Smartsheets API, Marketplace API</b></p><br />
-                            <a href="https://github.com/NoahSekreter/CenFill" className="button">Github Page</a>
+                            <a href="https://github.com/NoahSekreter/CenFill" className="button" rel="noreferrer" target="_blank"  aria-label="Visit the CenFill Github repo">Github Page</a>
                         </div>
                     </article>
                     <article>
@@ -100,22 +118,3 @@ function Main() {
 }
 
 export default Main
-
-// // Old code, may add back later 
-// Contact info and resume
-// <section id="contact">
-//     <div className="section-banner">
-//         <h2>CONTACT ME</h2>
-//     </div>
-//     <div className="contact-content">
-//         <p>The most effective way to contact me is through email at <a href="mailto:nsekreter@gmail.com">nsekreter@gmail.com</a>.</p>
-
-//         <h3>Additional Sites</h3>
-//         <span><a className="button" href="https://github.com/NoahSekreter">Github</a></span>
-//         <span><a className="button" href="https://www.linkedin.com/in/sekreter/">LinkedIn</a></span>
-
-//         <h3>Resume</h3>
-//         <span><a className="button" href={ResumePDF} download='Sekreter Resume 2021'>Resume (PDF)</a></span>
-//         <span><a className="button" href={ResumeDOC} download='Sekreter Resume 2021'>Resume (Word)</a></span>
-//     </div>
-// </section>
