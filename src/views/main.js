@@ -14,7 +14,7 @@ function Main() {
                     <h1>NOAH SEKRETER</h1>
                     <h2>WEB & SOFTWARE DEVELOPER</h2>
                     <div id="scroller">
-                        <span>HTML5, Twig/Timber, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, Drupal, Wordpress, C#, MVC, ASP.NET, mySQL, Python, Storybook, Webpack, Vite, ESLint -&nbsp;</span>
+                        <span>HTML5, Twig/Timber, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, Drupal, Wordpress, mySQL, Python, Storybook, Webpack, Vite, ESLint, Agile SCRUM, C#, MVC, ASP.NET -&nbsp;</span>
                     </div>
                     <a href="#about" className="button" style={{ marginRight: 10 }}>ABOUT</a>
                     <a href={ResumePDF} className="button" rel="noreferrer" target="_blank">RESUME</a>
