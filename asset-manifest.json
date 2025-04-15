@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/sekreter-portfolio/static/css/main.e9058f40.css",
-    "main.js": "/sekreter-portfolio/static/js/main.023c180c.js",
+    "main.css": "/sekreter-portfolio/static/css/main.d36e8e78.css",
+    "main.js": "/sekreter-portfolio/static/js/main.083940fd.js",
+    "static/media/mjhs-banner.jpg": "/sekreter-portfolio/static/media/mjhs-banner.c98d1467112be71bb3f0.jpg",
     "static/media/headshot.jpg": "/sekreter-portfolio/static/media/headshot.d00baa12fa149ac3d036.jpg",
     "static/media/ch-banner.JPG": "/sekreter-portfolio/static/media/ch-banner.0df16dd8873b9c838ed8.JPG",
     "static/media/portfolio-banner.JPG": "/sekreter-portfolio/static/media/portfolio-banner.8c18c82088c1733a6e9b.JPG",
@@ -10,11 +11,11 @@
     "static/media/cenfill-banner.JPG": "/sekreter-portfolio/static/media/cenfill-banner.900758fcec0a3dbbc5eb.JPG",
     "static/media/webbing.svg": "/sekreter-portfolio/static/media/webbing.7f28b468cd845f3f29dc.svg",
     "index.html": "/sekreter-portfolio/index.html",
-    "main.e9058f40.css.map": "/sekreter-portfolio/static/css/main.e9058f40.css.map",
-    "main.023c180c.js.map": "/sekreter-portfolio/static/js/main.023c180c.js.map"
+    "main.d36e8e78.css.map": "/sekreter-portfolio/static/css/main.d36e8e78.css.map",
+    "main.083940fd.js.map": "/sekreter-portfolio/static/js/main.083940fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9058f40.css",
-    "static/js/main.023c180c.js"
+    "static/css/main.d36e8e78.css",
+    "static/js/main.083940fd.js"
   ]
 }
