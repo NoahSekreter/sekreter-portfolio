@@ -66,12 +66,21 @@ function Main() {
                     <h2>PROJECTS</h2>
                 </div>
                 <div id="carousel">
-                <article>
-                        <div className="background banner-1"></div>
+                    <article>
+                        <div className="background banner-5"></div>
                         <div className="text">
-                            <h3>ASPPH (2021, 2025)</h3>
+                            <h3>MJHS (2024-2025)</h3>
+                            <p>Modernized a large portion of the site as part of a team-wide site refresh project, working primarily on homepage and mega-menu enhancements.</p>
+                            <p><b>Created Using: Wordpress, CSS, SASS, JavaScript, PHP, ACF, Figma</b></p><br />
+                            <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS website">Website</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div className="background banner-6"></div>
+                        <div className="text">
+                            <h3>ASPPH (2025)</h3>
                             <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
-                            <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS/SASS, JavaScript, PHP, ACF</b></p><br />
+                            <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSSASS, JavaScript, PHP, ACF, Figma</b></p><br />
                             <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
                         </div>
                     </article>
@@ -80,14 +89,14 @@ function Main() {
                         <div className="text">
                             <h3>UNICEF USA (2023-2024)</h3>
                             <p>Part of a team handling continuous maintenance and improvement, I have handled various Drupal block updates and page hero enhancements</p>
-                            <p><b>Created Using: Drupal, Twig, CSS, SCSS/SASS, JavaScript, jQuery, PHP, YML, Layout Builder</b></p><br />
+                            <p><b>Created Using: Drupal, Twig, CSS, SCSS/SS, JavaScript, jQuery, PHP, YML, Layout Builder, Figma</b></p><br />
                             <a href="https://unicefusa.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit UNICEF USA website">Website</a>
                         </div>
                     </article>
                     <article>
                         <div className="background banner-1"></div>
                         <div className="text">
-                            <h3>This Website (2021)</h3>
+                            <h3>This Website (2021, 2025)</h3>
                             <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. As of August 2021, this site has been built utilizing React.</p>
                             <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, React</b></p><br />
                             <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button" rel="noreferrer" target="_blank"  aria-label="Visit this website's GitHub repo">Github Page</a>

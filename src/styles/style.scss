@@ -211,6 +211,8 @@ nav {
         .banner-2 { background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/cenfill-banner.JPG'); }
         .banner-3 { background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/ch-banner.JPG'); }
         .banner-4 { background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/lp-banner.JPG'); }
+        .banner-5 { background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/mjhs-banner.jpg'); }
+        .banner-6 { background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/aspph-banner.jpg'); }
         &:after {
             content: '';
             position: absolute;
@@ -234,7 +236,7 @@ nav {
         &:hover {
             overflow: visible;
             &:after {
-                box-shadow: inset 0px 0px 0px 15px rgba(255, 255, 255, 0.6);
+                box-shadow: inset 0px 0px 0px 15px rgb(184, 184, 184);
             }
         }
     }
