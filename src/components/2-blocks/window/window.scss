@@ -141,6 +141,14 @@
       object-fit: cover;
     }
 
+    figcaption {
+      color: #555;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
     article {
       display: block;
       padding-bottom: 16px;

@@ -46,6 +46,12 @@
         rgb(0, 28, 53);
     }
 
+    svg {
+      fill: $color-white;
+      width: 14px;
+      margin-right: 8px;
+    }
+
     &.toolbar__main {
       position: absolute;
       border-radius: 50%;
@@ -54,20 +60,11 @@
       left: 5px;
       bottom: 5px;
       padding: 8px;
-      // background: rgba(44, 111, 173, 1);
 
-      // &:hover,
-      // &:focus {
-      //   background: rgb(73, 142, 207);
-      // }
-  
-      // &:active {
-      //   background: rgb(3, 40, 75);
-      // }
-    }
-
-    svg {
-      fill: $color-white;
+      svg {
+        width: 24px;
+        margin-right: 0;
+      }
     }
   }
 }

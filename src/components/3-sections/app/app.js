@@ -6,9 +6,14 @@ import Headshot from './headshot.jpg';
 import Resume from './SekreterResume2025.pdf';
 import Scroller from '../../1-elements/scroller/scroller.js';
 
+
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const frontRef = useRef(null);
+  
+  function createBlueScreen() { 
+    document.getElementsByClassName('blue-screen')[0].classList.add('active');
+  } 
 
   useEffect(() => {
     setIsLoaded(true);
@@ -112,8 +117,9 @@ export default function App() {
               (<a href="https://mega.nz/file/uQo23ZoK#joD8bj81R55vksFhyCURfAgd8kI5LH69ykp_bAmbZYA" rel="noreferrer" target="_blank">
               Click here to check it out, if you're interested</a>)! I also enjoy playing video games and reading manga in my free time.
             </p>
-
             <img src={ Headshot } alt="A headshot of Noah Sekreter"/>
+            <figcaption>A headshot of Noah Sekreter</figcaption>
+            <p><a href="#totally-not-a-virus-bro-trust-me" onClick={ createBlueScreen }>Oh what have we here? A single link hidden away? How peculiar...</a></p>
           </>
         }
       />
@@ -198,7 +204,6 @@ export default function App() {
           </>
         }
       />
-
     </main>
   );
 }

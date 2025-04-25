@@ -1,0 +1,23 @@
+@use '../../0-global/variables' as *;
+
+.blue-screen {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0827F5;
+  color: $color-white;
+  font-family: monospace;
+  padding: 16px;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
