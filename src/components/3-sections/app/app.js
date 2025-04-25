@@ -138,6 +138,7 @@ export default function App() {
       <Window
         title="Summary"
         id="summary"
+        styles= { { top: '16px', left: '16px' } }
         content={
           <>
             <div className='window__title'>
@@ -169,6 +170,7 @@ export default function App() {
         title="About Me"
         id="about-me"
         hidden="true"
+        styles= { { top: '46px', left: '46px' } }
         content={
           <>
             <h2>About Me</h2>
@@ -204,6 +206,7 @@ export default function App() {
         title="Work Experience"
         id="work-experience"
         hidden="true"
+        styles= { { top: '76px', left: '76px' } }
         content={
           <>
             <h2>Work Experience</h2>
@@ -237,6 +240,7 @@ export default function App() {
         title="Portfolio"
         id="portfolio"
         hidden="true"
+        styles= { { top: '106px', left: '106px' } }
         content={
           <>
             <h2>Portfolio</h2>

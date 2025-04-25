@@ -2,8 +2,6 @@
 
 .window {
   position: absolute;
-  top: 20%;
-  left: 20%;
   transition: bottom 3s cubic-bezier(0, .5, .7, 1) 1s;
   border: 4px solid rgba(9, 40, 54, 0.7);
   border-top: none;
@@ -17,11 +15,6 @@
     width: calc(100% - 32px);
     position: relative;
     margin-bottom: 16px;
-  }
-
-  &:first-of-type {
-    top: 32px;
-    left: 32px;
   }
 
   &.active {
@@ -75,6 +68,7 @@
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.8px;
+    cursor: grab;
 
     span {
       display: block;
