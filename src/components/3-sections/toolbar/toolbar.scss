@@ -1,0 +1,63 @@
+@use '../../0-global/variables' as *;
+
+.toolbar {
+  width: 100vw;
+  height: 40px;
+  background-color: #092836;
+  background: linear-gradient(#092836 0%, #002c5e 40%) no-repeat;
+  display: flex;
+  gap: 4px;
+  position: relative;
+  z-index: 10;
+
+  button {
+    cursor: pointer;
+    background: rgba(44, 111, 173, 0.8);
+    border: none;
+    color: $color-white;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      background: rgba(44, 111, 173, 1);
+    }
+
+    &:active {
+      background: rgb(13, 45, 75);
+    }
+
+    &.toolbar__main {
+      position: absolute;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      left: 5px;
+      bottom: 5px;
+      padding: 8px;
+      background: rgba(44, 111, 173, 1);
+
+      &:hover,
+      &:focus {
+        background: rgb(73, 142, 207);
+      }
+  
+      &:active {
+        background: rgb(3, 40, 75);
+      }
+    }
+
+    svg {
+      fill: $color-white;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: 58px;
+    }
+  }
+}

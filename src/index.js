@@ -1,59 +1,21 @@
-// Importing JS
 import React from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
-// Importing views
-import Main from './views/main';
-import Nav from './views/nav';
-// Importing CSS
-import './styles/style.css';
+import ReactDOM from 'react-dom/client';
+import './components/0-global/global.scss'
+import './dist/index.css';
+import App from './components/3-sections/app/app.js';
+import Toolbar from './components/3-sections/toolbar/toolbar.js'
+// import reportWebVitals from './templates/reportWebVitals';
 
-// On load: Begin initialization
-$(() => {
-  // Pop up the titlebox
-  $('.titlebox').css('opacity', '1');
-  $('.titlebox').css('margin-bottom', '0');
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-  // Smooth scrolling links
-  $('a[href*=\\#]').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 800);
-  });
+root.render(
+  <React.StrictMode>
+    <Toolbar />
+    <App />
+  </React.StrictMode>
+);
 
-  // Nav :after line
-  $(document).on('scroll', function () {
-    var scrollAmount = $(this).scrollTop() + 51;
-    $('#nav-main').removeClass('active');
-    $('#nav-about').removeClass('active');
-    $('#nav-projects').removeClass('active');
-    if (scrollAmount >= $('#projects').position().top) {
-      $('#nav-projects').addClass('active');
-    } else if (scrollAmount >= $('#about').position().top) {
-      $('#nav-about').addClass('active');
-    } else {
-      $('#nav-main').addClass('active');
-    }
-  })
-
-  // Titlecard carousel
-  var scr = 0
-  $('#scroller').scrollLeft(0);
-  $("#scroller span").clone().appendTo("#scroller");
-  setInterval(function () {
-    $('#scroller').scrollLeft(scr++);
-    if (scr >= $("#scroller span").width()) { scr = 0; }
-  }, 16);
-});
-
-// Create the page
-function App() {
-  return (
-    <React.Fragment>
-      <Nav />
-      <Main />
-    </React.Fragment>
-  )
-}
-
-// Render the body
-ReactDOM.render(<App />, document.getElementById('root'));
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();

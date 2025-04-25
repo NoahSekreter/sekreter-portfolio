@@ -1,24 +1,23 @@
 {
   "name": "sekreter-portfolio",
   "homepage": "https://noahsekreter.github.io/sekreter-portfolio/",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "gh-pages": "^6.3.0",
-    "jquery": "^3.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^1.1.2"
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.87.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-deploy -d build",
     "build": "react-scripts build",
+    "deploy": "gh-pages -b gh-deploy -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

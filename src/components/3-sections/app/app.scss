@@ -1,0 +1,48 @@
+@use '../../0-global/variables' as *;
+
+.app {
+  position: relative;
+  height: calc(100vh - 40px);
+  background:
+    url('./hills-1.svg') repeat-x 0 100vh / 100%,
+    url('./hills-2.svg') repeat-x 0 100vh / 80%,
+    url('./hills-3.svg') repeat-x 0 100vh / 115%;
+  // transition: background-position 3s ease-out 1s;
+  will-change: background-position;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    transition: background-position 4s cubic-bezier(0, .5, .7, 1);
+    width: 100vw;
+    height: 400vh;
+    z-index: -1;
+    background: radial-gradient(
+      ellipse 300% 50% at 50% 100%,
+      #90b8db 0%,
+      #3e8ce6 40%,
+      #3f91f0 50%,
+      #80b3ee 60%,
+      #caebe8 90%,
+      $color-white 100%) no-repeat 0 100vh / 100%;
+  }
+
+  @media (prefers-dark-interface) {
+    background: radial-gradient(
+      ellipse 300% 50% at 50% 100%,
+      #90b8db 0%,
+      #3e8ce6 40%,
+      #3f91f0 50%,
+      #80b3ee 60%,
+      #caebe8 90%,
+      $color-black 100%) no-repeat 0 100vh / 100%;
+    color: $color-white;
+  }
+
+  &.initialize {
+    &::before {
+      background-position: 0 -300vh;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use '../../0-global/variables' as *;
+
+.position {
+  span {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .position__company {
+    font-weight: 700;
+  }
+
+  .position__title {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .position__dates {
+    font-weight: 700;
+    color: rgb(41, 41, 41);
+  }
+}
