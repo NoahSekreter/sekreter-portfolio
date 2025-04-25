@@ -10,9 +10,10 @@ export default function BlueScreen() {
         <p>If this is the first time you've seen this Stop error screen, refresh your computer. If these steps appear again, follow these steps:</p>
         <p>Check to make sure any new hardware or software is properly installed. If this is a new installation, ask your hardware or software manufacturer for any windows updates you might need.</p>
         <p>If problems continue, disable or remove any newly installed hardware or software. Disable BIOS memory options such as caching or shadowing. If you need to use Safe Mode to remove or disable components, restart your computer, press F8 to select Advanced Startup Options, and then Select Safe Mode.</p>
-        <p>If all else fails, you might need an expert. Consider sending an email over as nsekreter@gmail.com to get in contact with an expert.</p>
+        <p>If all else fails, you might need an expert. Consider sending an email over as nsekreter@gmail.com to get in contact with an expert and onboard team into your team.</p>
         <p>Technical Information:</p>
         <p>OH NOOO!!!!! YOU TOTALLY GOT HACKED!!!!!11!!!!1!! It's a real shame this isn't a browser you can just refresh. No that'd be impossible. Anyways enjoy your totally bricked computer :)</p>
+        <p></p>
       </div>
     </div>
   );

@@ -90,7 +90,8 @@ export default function Window(variables) {
       id={ variables.id }
       onMouseDown={(e) => setActiveWindow(e)}
       onTouchStart={(e) => setActiveWindow(e)}
-      className={'window' + (variables.hidden ? ' hidden' : ' active')}>
+      className={'window' + (variables.hidden ? ' hidden' : ' active')}
+      style={ variables.styles }>
       <div className='window__top'>
         <span>{ variables.title }</span>
         <button

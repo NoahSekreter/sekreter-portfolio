@@ -10,10 +10,81 @@ import Scroller from '../../1-elements/scroller/scroller.js';
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const frontRef = useRef(null);
+
+  const [activeErrors, setActiveErrors] = useState([]);
+  const [errorWindows, setErrorWindows] = useState([
+    {
+      title: 'ERROR: Unknown Software',
+      content: <p>Error!<br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</p>,
+      styles: { top: '100px', left: '500px' }
+    },
+    {
+      title: 'ERROR: system32 modified',
+      content: <p>Error!<br /><br />A change has been detected within system32. Please revert changes before continuing.</p>,
+      styles: { top: '50px', left: '150px' }
+    },
+    {
+      title: 'ERROR: f00-3214-DI1230',
+      content: <p>2134-2134324 546-GE7008f dsaf324 124 2141234 21asfasfd afdsaf</p>,
+      styles: { top: '150px', left: '300px' }
+    },
+    {
+      title: 'limewire',
+      content: <p>Download free music at limewire HD quality free no virus listen to top songs free HD now</p>,
+      styles: { top: '280px', left: '20px' }
+    },
+    {
+      title: 'Seriously?',
+      content: <p>Weren't you taught not to click on suspicious links?</p>,
+      styles: { top: '330px', left: '250px' }
+    },
+    {
+      title: 'FREE ANTIVIRUS',
+      content: <p>DOWNLOAD FREE ANTIVIRUS TODAY! PROTECT YOUR DATA FROM INTERNET THREATS NOW!</p>,
+      styles: { top: '80px', left: '670px' }
+    },
+    {
+      title: 'ERROR: ',
+      content: <p>o no</p>,
+      styles: { top: '410px', left: '630px' }
+    },
+    {
+      title: 'ERROR: Aw Dang It',
+      content: <p>Whelp, it's been an honor gentlemen...</p>,
+      styles: { top: '220px', left: '580px' }
+    }
+  ]); 
+
+  function createBlueScreen() {
+    const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 1000]; // ms
   
-  function createBlueScreen() { 
-    document.getElementsByClassName('blue-screen')[0].classList.add('active');
-  } 
+    function triggerComponent(index) {
+      if (index < delays.length) {
+        setTimeout(() => {
+          setErrorWindows(prevErrors => {
+            if (prevErrors.length > 0) {
+              const [nextWindow, ...remaining] = prevErrors;
+  
+              // Queue this one for rendering
+              setActiveErrors(prev => [...prev, nextWindow]);
+  
+              // Return updated remaining windows
+              return remaining;
+            } else {
+              // No more errors, trigger blue screen
+              const screen = document.getElementsByClassName('blue-screen')[0];
+              if (screen) screen.classList.add('active');
+              return prevErrors;
+            }
+          });
+  
+          triggerComponent(index + 1);
+        }, delays[index]);
+      }
+    }
+
+    triggerComponent(0);
+  }
 
   useEffect(() => {
     setIsLoaded(true);
@@ -204,6 +275,8 @@ export default function App() {
           </>
         }
       />
+
+      {activeErrors.map((item, i) => ( <Window key={i} title={item.title} content={item.content} styles={item.styles} /> ))}
     </main>
   );
 }
