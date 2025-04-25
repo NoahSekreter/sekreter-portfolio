@@ -29,15 +29,27 @@
   }
 
   @media (prefers-dark-interface) {
-    background: radial-gradient(
-      ellipse 300% 50% at 50% 100%,
-      #90b8db 0%,
-      #3e8ce6 40%,
-      #3f91f0 50%,
-      #80b3ee 60%,
-      #caebe8 90%,
-      $color-black 100%) no-repeat 0 100vh / 100%;
-    color: $color-white;
+    &::before {
+      background: radial-gradient(
+        ellipse 300% 50% at 50% 100%,
+        #202a33 0%,
+        #0d2d52 40%,
+        #07192e 50%,
+        #101924 60%,
+        #101616 90%,
+        $color-black 100%) no-repeat 0 100vh / 100%;
+    }
+
+    .window {
+      .window__content {
+        background-color: #101924;
+        color: $color-white;
+
+        a {
+          color: $color-white;
+        }
+      }
+    }
   }
 
   &.initialize {

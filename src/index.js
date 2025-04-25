@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './components/0-global/global.scss'
-import './dist/index.css';
 import App from './components/3-sections/app/app.js';
 import Toolbar from './components/3-sections/toolbar/toolbar.js'
 // import reportWebVitals from './templates/reportWebVitals';

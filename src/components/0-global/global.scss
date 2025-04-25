@@ -23,6 +23,10 @@ code {
 #root {
   display: flex;
   flex-direction: column-reverse;
+
+  // @media (prefers-dark-interface) {
+  //   background-color: #000000;
+  // }
 }
 
 h1,
@@ -39,6 +43,9 @@ h1,
 .h1 {
   font-size: 4rem;
   line-height: 72px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(55, 55, 55, 0.5);
+  margin-bottom: 8px;
 }
 
 h2,

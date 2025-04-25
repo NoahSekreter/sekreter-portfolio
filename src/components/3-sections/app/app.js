@@ -53,7 +53,7 @@ export default function App() {
   return (
     <main
       ref={frontRef}
-      className={'app' + (isLoaded ? ' initialize' : '')}>
+      className={'app night' + (isLoaded ? ' initialize' : '')}>
       <Window
         title="Summary"
         id="summary"
@@ -61,14 +61,25 @@ export default function App() {
           <>
             <div className='window__title'>
               <h1>Noah Sekreter</h1>
-              <div className='h3'>Web Developer</div>
+              <div className='h3'>Front-End Web Developer</div>
             </div>
             <Scroller />
+            <p><b>Current Career Status: Available for employment, looking for a Web Developer position in the Chicago area if onsite, or
+              a remote position anywhere.</b></p>
             <div className='window__links'>
               <a rel="noreferrer" href={ Resume } target='_blank'>View Resume</a>
               <a rel="noreferrer" href="https://github.com/NoahSekreter" target='_blank'>View GitHub</a>
               <a rel="noreferrer" href="https://www.linkedin.com/in/sekreter" target='_blank'>View LinkedIn</a>
+              <a rel="noreferrer" href="mailto:nsekreter@gmail.com" target='_blank'>E-Mail me at nsekreter@gmail.com</a>  
             </div>
+            <p><b>New Website! Under construction! Upcoming changes...</b></p>
+            <ul>
+              <li>Improved mobile experience!</li>
+              <li>Expandable window sizes!</li>
+              <li>Prettier Windows!</li>
+              <li>Prettier Menu!</li>
+              <li>Dark mode!</li>
+            </ul>
           </>
         }
       />
