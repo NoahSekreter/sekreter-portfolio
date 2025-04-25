@@ -13,6 +13,10 @@
   font-family: monospace;
   padding: 16px;
 
+  @media screen and (max-width: 760px) {
+    overflow: scroll;
+  }
+
   p {
     margin-bottom: 20px;
   }

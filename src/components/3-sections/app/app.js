@@ -15,12 +15,12 @@ export default function App() {
   const [errorWindows, setErrorWindows] = useState([
     {
       title: 'ERROR: Unknown Software',
-      content: <p>Error!<br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</p>,
+      content: <p><b>ERROR</b><br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</p>,
       styles: { top: '100px', left: '500px' }
     },
     {
       title: 'ERROR: system32 modified',
-      content: <p>Error!<br /><br />A change has been detected within system32. Please revert changes before continuing.</p>,
+      content: <p><b>ERROR</b><br /><br />A change has been detected within system32. Please revert changes before continuing.</p>,
       styles: { top: '50px', left: '150px' }
     },
     {
@@ -31,7 +31,7 @@ export default function App() {
     {
       title: 'limewire',
       content: <p>Download free music at limewire HD quality free no virus listen to top songs free HD now</p>,
-      styles: { top: '280px', left: '20px' }
+      styles: { top: '280px', left: '10px' }
     },
     {
       title: 'Seriously?',
@@ -45,13 +45,13 @@ export default function App() {
     },
     {
       title: 'ERROR: ',
-      content: <p>o no</p>,
-      styles: { top: '410px', left: '630px' }
+      content: <p><b>ERROR</b><br /><br />o no</p>,
+      styles: { top: '400px', left: '630px' }
     },
     {
       title: 'ERROR: DANGEROUS SOFTWARE DETECTED!',
-      content: <p>ERROR:<br /><br />DANGEROUS SOFTWARE DETECTED! SEND YOUR CREDIT CARD INFORMATION TO thisisafakeemail@hotmail.com IMMEDIATELY!!!!!!</p>,
-      styles: { top: '540px', left: '80px' }
+      content: <p><b>ERROR</b><br /><br />DANGEROUS SOFTWARE DETECTED! SEND YOUR CREDIT CARD INFORMATION TO thisisafakeemail@hotmail.com IMMEDIATELY!!!!!!</p>,
+      styles: { top: '410px', left: '80px' }
     },
     {
       title: 'ERROR: Aw Dang It',
