@@ -1,21 +1,18 @@
 {
   "files": {
-    "main.css": "/sekreter-portfolio/static/css/main.d36e8e78.css",
-    "main.js": "/sekreter-portfolio/static/js/main.083940fd.js",
-    "static/media/mjhs-banner.jpg": "/sekreter-portfolio/static/media/mjhs-banner.c98d1467112be71bb3f0.jpg",
+    "main.css": "/sekreter-portfolio/static/css/main.cc880c7d.css",
+    "main.js": "/sekreter-portfolio/static/js/main.b7c4da6d.js",
     "static/media/headshot.jpg": "/sekreter-portfolio/static/media/headshot.d00baa12fa149ac3d036.jpg",
-    "static/media/ch-banner.JPG": "/sekreter-portfolio/static/media/ch-banner.0df16dd8873b9c838ed8.JPG",
-    "static/media/portfolio-banner.JPG": "/sekreter-portfolio/static/media/portfolio-banner.8c18c82088c1733a6e9b.JPG",
-    "static/media/lp-banner.JPG": "/sekreter-portfolio/static/media/lp-banner.a038cfc2ff4cf4359976.JPG",
     "static/media/SekreterResume2025.pdf": "/sekreter-portfolio/static/media/SekreterResume2025.adec677f38a71d149d5b.pdf",
-    "static/media/cenfill-banner.JPG": "/sekreter-portfolio/static/media/cenfill-banner.900758fcec0a3dbbc5eb.JPG",
-    "static/media/webbing.svg": "/sekreter-portfolio/static/media/webbing.7f28b468cd845f3f29dc.svg",
     "index.html": "/sekreter-portfolio/index.html",
-    "main.d36e8e78.css.map": "/sekreter-portfolio/static/css/main.d36e8e78.css.map",
-    "main.083940fd.js.map": "/sekreter-portfolio/static/js/main.083940fd.js.map"
+    "static/media/hills-2.svg": "/sekreter-portfolio/static/media/hills-2.b001f16efa3475cbea74.svg",
+    "static/media/hills-1.svg": "/sekreter-portfolio/static/media/hills-1.d1683661c4c0ebe490c8.svg",
+    "static/media/hills-3.svg": "/sekreter-portfolio/static/media/hills-3.5872971fdde1492e7083.svg",
+    "main.cc880c7d.css.map": "/sekreter-portfolio/static/css/main.cc880c7d.css.map",
+    "main.b7c4da6d.js.map": "/sekreter-portfolio/static/js/main.b7c4da6d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d36e8e78.css",
-    "static/js/main.083940fd.js"
+    "static/css/main.cc880c7d.css",
+    "static/js/main.b7c4da6d.js"
   ]
 }
