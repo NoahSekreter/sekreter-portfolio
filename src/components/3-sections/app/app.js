@@ -53,7 +53,7 @@ export default function App() {
   return (
     <main
       ref={frontRef}
-      className={'app night' + (isLoaded ? ' initialize' : '')}>
+      className={'app' + (isLoaded ? ' initialize' : '')}>
       <Window
         title="Summary"
         id="summary"

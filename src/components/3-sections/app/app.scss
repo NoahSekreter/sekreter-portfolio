@@ -52,6 +52,24 @@
     }
   }
 
+  @media screen and (max-width: 760px) {
+    overflow-y: scroll;
+    height: 100%;
+    background-position: 0 0, 0 0, 0 0;
+    padding-bottom: 16px;
+
+    &::before {
+      top: 0;
+      height: 100%;
+      background-position: 0 0 !important;
+      background: radial-gradient(
+        ellipse 300% 50% at 50% 100%,
+        #90b8db 0%,
+        #3e8ce6 40%,
+        #3f91f0 50%) no-repeat 0 0 / 100%;  
+    }
+  }
+
   &.initialize {
     &::before {
       background-position: 0 -300vh;

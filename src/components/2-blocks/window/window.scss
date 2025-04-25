@@ -11,6 +11,14 @@
   width: 600px;
   transition: width 0.3s;
 
+  @media screen and (max-width: 760px) {
+    left: 16px !important;
+    top: 16px !important;
+    width: calc(100% - 32px);
+    position: relative;
+    margin-bottom: 16px;
+  }
+
   &:first-of-type {
     top: 32px;
     left: 32px;
@@ -51,6 +59,10 @@
 
   &.hidden {
     display: none;
+
+    @media screen and (max-width: 760px) {
+      display: block;
+    }
   }
 
   .window__top {
@@ -78,24 +90,25 @@
     border: none;
     border-left: 2px solid rgba(97, 97, 97, 0.4);
     border-right: 2px solid rgba(97, 97, 97, 0.4);
-    background: none;
+    background: transparent;
     transition: all 0.2s;
     display: flex;
     justify-content: center;
     padding: 5px;
+    transition: all 0.2s ease-in-out;
 
     svg {
       fill: $color-white;
+    }
+
+    &:hover,
+    &:focus-within {
+      background: linear-gradient(rgba(228, 228, 228, 0.3), rgba(228, 228, 228, 0.1) 50%);
     }
   }
 
   .window__max-min {
     border-right: none;
-
-    &:hover,
-    &:focus {
-      background: rgba(228, 228, 228, 0.3);
-    }
 
     svg {
       &:first-of-type {
@@ -111,7 +124,7 @@
   .window__close {
     &:hover,
     &:focus {
-      background: rgba(197, 61, 61, 0.7);
+      background: linear-gradient(rgba(240, 111, 111, 0.9), rgba(197, 61, 61, 0.7) 50%);
     }
   }
 
