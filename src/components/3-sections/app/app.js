@@ -49,14 +49,19 @@ export default function App() {
       styles: { top: '410px', left: '630px' }
     },
     {
+      title: 'ERROR: DANGEROUS SOFTWARE DETECTED!',
+      content: <p>ERROR:<br /><br />DANGEROUS SOFTWARE DETECTED! SEND YOUR CREDIT CARD INFORMATION TO thisisafakeemail@hotmail.com IMMEDIATELY!!!!!!</p>,
+      styles: { top: '540px', left: '80px' }
+    },
+    {
       title: 'ERROR: Aw Dang It',
-      content: <p>Whelp, it's been an honor gentlemen...</p>,
+      content: <p>Well, it's been an honor gentlemen...</p>,
       styles: { top: '220px', left: '580px' }
     }
   ]); 
 
   function createBlueScreen() {
-    const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 1000]; // ms
+    const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 600, 1000]; // ms
   
     function triggerComponent(index) {
       if (index < delays.length) {
