@@ -8,7 +8,7 @@ import Scroller from '../../1-elements/scroller/scroller.js';
 
 
 export default function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState('');
   const frontRef = useRef(null);
   const [activeErrors, setActiveErrors] = useState([]);
   const [, setErrorWindows] = useState([
@@ -88,7 +88,9 @@ export default function App() {
   }
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded('initializing');
+
+    const initTimer = setTimeout(() => { setIsLoaded('initialized'); }, 4000);
 
     let frameId;
     let start = null;
@@ -124,13 +126,16 @@ export default function App() {
     };
 
     frameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameId);
+    return () => {
+      clearTimeout(initTimer);
+      cancelAnimationFrame(frameId);
+    }
   }, []);
 
   return (
     <main
       ref={frontRef}
-      className={'app' + (isLoaded ? ' initialize' : '')}>
+      className={'app ' + isLoaded}>
       <Window
         title="Summary"
         id="summary"
@@ -152,7 +157,6 @@ export default function App() {
             </div>
             <p><b>New Website! Under construction! Upcoming changes...</b></p>
             <ul>
-              <li>Improved mobile experience!</li>
               <li>Prettier Windows!</li>
               <li>Dark mode!</li>
             </ul>

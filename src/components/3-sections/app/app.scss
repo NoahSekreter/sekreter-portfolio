@@ -70,9 +70,16 @@
     }
   }
 
-  &.initialize {
+  &.initializing {
     &::before {
       background-position: 0 -300vh;
+    }
+  }
+
+  &.initialized {
+    &::before {
+      background-position: 0 -300vh;
+      transition: none;
     }
   }
 }
