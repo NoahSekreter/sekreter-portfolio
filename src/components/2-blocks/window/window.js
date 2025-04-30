@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './window.scss';
 
 export default function Window(variables) {  
+  const [isLoaded, setIsLoaded] = useState('');
+
   const setActiveWindow = (e) => {
     let windows = document.getElementsByClassName("window");
     for (let window of windows) {
@@ -125,11 +127,17 @@ export default function Window(variables) {
   }
 
   useEffect(() => {
+    setIsLoaded('initializing');
+
+    const initTimer = setTimeout(() => { setIsLoaded('initialized'); }, 3750);
+
     let elements = document.getElementsByClassName('window');
     for (let element of elements) {
       dragElement(element);
       resizeElement(element);
     }
+
+    return () => clearTimeout(initTimer);
   }, []);
 
   return (
@@ -137,7 +145,7 @@ export default function Window(variables) {
       id={ variables.id }
       onMouseDown={(e) => setActiveWindow(e)}
       onTouchStart={(e) => setActiveWindow(e)}
-      className={'window' + (variables.hidden ? ' hidden' : ' active')}
+      className={['window', (variables.hidden ? 'hidden' : 'active'), isLoaded].join(' ')}
       style={ variables.styles }>
       <div className='window__top'>
         <span>{ variables.title }</span>

@@ -135,11 +135,11 @@ export default function App() {
   return (
     <main
       ref={frontRef}
-      className={'app ' + isLoaded}>
+      className={['app', isLoaded].join(' ')}>
       <Window
         title="Summary"
         id="summary"
-        styles= { { top: '16px', left: '16px' } }
+        styles= { { left: '16px' } }
         content={
           <>
             <div className='window__title'>
