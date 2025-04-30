@@ -21,110 +21,110 @@ export default function Window(variables) {
     e.currentTarget.parentElement.parentElement.classList.toggle('maximized');
   }
 
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.getElementsByClassName("window__top")[0].onmousedown = dragMouseDown;
+    elmnt.getElementsByClassName("window__top")[0].ontouchstart = dragMouseDown;
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.ontouchend = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+      document.ontouchmove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+      // If the element would spill out of the screen, cap the element position
+      if (elmnt.offsetTop < 0) { elmnt.style.top = "0px"; }
+      if (elmnt.offsetLeft < 0) { elmnt.style.left = "0px"; }
+      if (elmnt.offsetTop + elmnt.offsetHeight + 40 > window.innerHeight) {
+        elmnt.style.top = (window.innerHeight - elmnt.offsetHeight - 40) + "px";
+      }
+      if (elmnt.offsetLeft + elmnt.offsetWidth > window.innerWidth) {
+        elmnt.style.left = (window.innerWidth - elmnt.offsetWidth) + "px";
+      }
+    }
+
+    function closeDragElement() {
+      // stop moving when mouse button is released:
+      document.onmouseup = null;
+      document.onmousemove = null;
+      document.ontouchend = null;
+      document.ontouchmove = null;
+    }
+  }
+
+  function resizeElement(elmnt) {
+    const rightHandle = elmnt.querySelector('.resizer--right');
+    const bottomHandle = elmnt.querySelector('.resizer--bottom');
+
+    let startX, startY, startWidth, startHeight;
+
+    rightHandle.onmousedown = initRightResize;
+    rightHandle.ontouchstart = initRightResize;
+    bottomHandle.onmousedown = initBottomResize;
+    bottomHandle.ontouchstart = initBottomResize;
+
+    function initRightResize(e) {
+      e.preventDefault();
+      startX = e.clientX || e.touches?.[0].clientX;
+      startWidth = parseInt(document.defaultView.getComputedStyle(elmnt).width, 10);
+  
+      document.documentElement.onmousemove = doRightResize;
+      document.documentElement.onmouseup = stopResize;
+      document.documentElement.ontouchmove = doRightResize;
+      document.documentElement.ontouchend = stopResize;
+    }
+
+    function initBottomResize(e) {
+      e.preventDefault();
+      startY = e.clientY || e.touches?.[0].clientY;
+      startHeight = parseInt(document.defaultView.getComputedStyle(elmnt).height, 10);
+  
+      document.documentElement.onmousemove = doBottomResize;
+      document.documentElement.onmouseup = stopResize;
+      document.documentElement.ontouchmove = doBottomResize;
+      document.documentElement.ontouchend = stopResize;
+    }
+
+    function doRightResize(e) {
+      let clientX = e.clientX || e.touches?.[0].clientX;
+      const newWidth = startWidth + (clientX - startX);
+      elmnt.style.width = `${Math.max(newWidth, 350)}px`;
+    }
+
+    function doBottomResize(e) {
+      let clientY = e.clientY || e.touches?.[0].clientY;
+      const newHeight = startHeight + (clientY - startY);
+      elmnt.style.height = `${Math.max(newHeight, 300)}px`;
+    }
+
+    function stopResize() {
+      document.documentElement.onmousemove = null;
+      document.documentElement.onmouseup = null;
+      document.documentElement.ontouchmove = null;
+      document.documentElement.ontouchend = null;
+    }
+  }
+
   useEffect(() => {
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      elmnt.getElementsByClassName("window__top")[0].onmousedown = dragMouseDown;
-      elmnt.getElementsByClassName("window__top")[0].ontouchstart = dragMouseDown;
-  
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.ontouchend = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-        document.ontouchmove = elementDrag;
-      }
-  
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-
-        // If the element would spill out of the screen, cap the element position
-        if (elmnt.offsetTop < 0) { elmnt.style.top = "0px"; }
-        if (elmnt.offsetLeft < 0) { elmnt.style.left = "0px"; }
-        if (elmnt.offsetTop + elmnt.offsetHeight + 40 > window.innerHeight) {
-          elmnt.style.top = (window.innerHeight - elmnt.offsetHeight - 40) + "px";
-        }
-        if (elmnt.offsetLeft + elmnt.offsetWidth > window.innerWidth) {
-          elmnt.style.left = (window.innerWidth - elmnt.offsetWidth) + "px";
-        }
-      }
-
-      function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.onmouseup = null;
-        document.onmousemove = null;
-        document.ontouchend = null;
-        document.ontouchmove = null;
-      }
-    }
-
-    function resizeElement(elmnt) {
-      const rightHandle = elmnt.querySelector('.resizer--right');
-      const bottomHandle = elmnt.querySelector('.resizer--bottom');
-
-      let startX, startY, startWidth, startHeight;
-
-      rightHandle.onmousedown = initRightResize;
-      rightHandle.ontouchstart = initRightResize;
-      bottomHandle.onmousedown = initBottomResize;
-      bottomHandle.ontouchstart = initBottomResize;
-
-      function initRightResize(e) {
-        e.preventDefault();
-        startX = e.clientX || e.touches?.[0].clientX;
-        startWidth = parseInt(document.defaultView.getComputedStyle(elmnt).width, 10);
-    
-        document.documentElement.onmousemove = doRightResize;
-        document.documentElement.onmouseup = stopResize;
-        document.documentElement.ontouchmove = doRightResize;
-        document.documentElement.ontouchend = stopResize;
-      }
-
-      function initBottomResize(e) {
-        e.preventDefault();
-        startY = e.clientY || e.touches?.[0].clientY;
-        startHeight = parseInt(document.defaultView.getComputedStyle(elmnt).height, 10);
-    
-        document.documentElement.onmousemove = doBottomResize;
-        document.documentElement.onmouseup = stopResize;
-        document.documentElement.ontouchmove = doBottomResize;
-        document.documentElement.ontouchend = stopResize;
-      }
-
-      function doRightResize(e) {
-        let clientX = e.clientX || e.touches?.[0].clientX;
-        const newWidth = startWidth + (clientX - startX);
-        elmnt.style.width = `${Math.max(newWidth, 350)}px`;
-      }
-
-      function doBottomResize(e) {
-        let clientY = e.clientY || e.touches?.[0].clientY;
-        const newHeight = startHeight + (clientY - startY);
-        elmnt.style.height = `${Math.max(newHeight, 300)}px`;
-      }
-
-      function stopResize() {
-        document.documentElement.onmousemove = null;
-        document.documentElement.onmouseup = null;
-        document.documentElement.ontouchmove = null;
-        document.documentElement.ontouchend = null;
-      }
-    }
-
     let elements = document.getElementsByClassName('window');
     for (let element of elements) {
       dragElement(element);
