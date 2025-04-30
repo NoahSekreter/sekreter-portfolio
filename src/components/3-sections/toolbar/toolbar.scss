@@ -4,8 +4,8 @@
   width: 100vw;
   height: 40px;
   background:
-    linear-gradient(rgba(99, 150, 173, 0.2) 0%, rgba(13, 144, 219, 0.1) 30%),
-    #00151f;
+    linear-gradient(rgba(163, 226, 255, 0.3) 0%, rgba(69, 187, 255, 0.1) 50%, transparent 75%),
+    #005279;
   display: flex;
   gap: 4px;
   padding: 4px 24px 4px 60px;
@@ -21,7 +21,7 @@
     cursor: pointer;
     background: 
       linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1) 30%),
-      rgb(0, 47, 90);
+      rgb(0, 37, 71);
     border: none;
     border-radius: 8px;
     color: $color-white;

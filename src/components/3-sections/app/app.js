@@ -10,9 +10,8 @@ import Scroller from '../../1-elements/scroller/scroller.js';
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const frontRef = useRef(null);
-
   const [activeErrors, setActiveErrors] = useState([]);
-  const [errorWindows, setErrorWindows] = useState([
+  const [, setErrorWindows] = useState([
     {
       title: 'ERROR: Unknown Software',
       content: <p><b>ERROR</b><br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</p>,
@@ -69,16 +68,13 @@ export default function App() {
           setErrorWindows(prevErrors => {
             if (prevErrors.length > 0) {
               const [nextWindow, ...remaining] = prevErrors;
-  
               // Queue this one for rendering
               setActiveErrors(prev => [...prev, nextWindow]);
-  
               // Return updated remaining windows
               return remaining;
             } else {
               // No more errors, trigger blue screen
-              const screen = document.getElementsByClassName('blue-screen')[0];
-              if (screen) screen.classList.add('active');
+              document.getElementsByClassName('blue-screen')[0].classList.add('active');
               return prevErrors;
             }
           });
@@ -157,9 +153,7 @@ export default function App() {
             <p><b>New Website! Under construction! Upcoming changes...</b></p>
             <ul>
               <li>Improved mobile experience!</li>
-              <li>Expandable window sizes!</li>
               <li>Prettier Windows!</li>
-              <li>Prettier Menu!</li>
               <li>Dark mode!</li>
             </ul>
           </>

@@ -48,23 +48,16 @@ export default function Window(variables) {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        // If the element would spill out of the screen, cap the element position
         // set the element's new position:
-        elmnt.style.top = elmnt.offsetTop < 0 ? "0px" : (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = elmnt.offsetLeft < 0 ? "0px" : (elmnt.offsetLeft - pos1) + "px";
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 
-        if (elmnt.offsetTop < 0) {
-          elmnt.style.top = "0px";
-        }
-
-        if (elmnt.offsetLeft < 0) {
-          elmnt.style.left = "0px";
-        }
-
+        // If the element would spill out of the screen, cap the element position
+        if (elmnt.offsetTop < 0) { elmnt.style.top = "0px"; }
+        if (elmnt.offsetLeft < 0) { elmnt.style.left = "0px"; }
         if (elmnt.offsetTop + elmnt.offsetHeight + 40 > window.innerHeight) {
           elmnt.style.top = (window.innerHeight - elmnt.offsetHeight - 40) + "px";
         }
-
         if (elmnt.offsetLeft + elmnt.offsetWidth > window.innerWidth) {
           elmnt.style.left = (window.innerWidth - elmnt.offsetWidth) + "px";
         }
@@ -79,9 +72,63 @@ export default function Window(variables) {
       }
     }
 
+    function resizeElement(elmnt) {
+      const rightHandle = elmnt.querySelector('.resizer--right');
+      const bottomHandle = elmnt.querySelector('.resizer--bottom');
+
+      let startX, startY, startWidth, startHeight;
+
+      rightHandle.onmousedown = initRightResize;
+      rightHandle.ontouchstart = initRightResize;
+      bottomHandle.onmousedown = initBottomResize;
+      bottomHandle.ontouchstart = initBottomResize;
+
+      function initRightResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches?.[0].clientX;
+        startWidth = parseInt(document.defaultView.getComputedStyle(elmnt).width, 10);
+    
+        document.documentElement.onmousemove = doRightResize;
+        document.documentElement.onmouseup = stopResize;
+        document.documentElement.ontouchmove = doRightResize;
+        document.documentElement.ontouchend = stopResize;
+      }
+
+      function initBottomResize(e) {
+        e.preventDefault();
+        startY = e.clientY || e.touches?.[0].clientY;
+        startHeight = parseInt(document.defaultView.getComputedStyle(elmnt).height, 10);
+    
+        document.documentElement.onmousemove = doBottomResize;
+        document.documentElement.onmouseup = stopResize;
+        document.documentElement.ontouchmove = doBottomResize;
+        document.documentElement.ontouchend = stopResize;
+      }
+
+      function doRightResize(e) {
+        let clientX = e.clientX || e.touches?.[0].clientX;
+        const newWidth = startWidth + (clientX - startX);
+        elmnt.style.width = `${Math.max(newWidth, 350)}px`;
+      }
+
+      function doBottomResize(e) {
+        let clientY = e.clientY || e.touches?.[0].clientY;
+        const newHeight = startHeight + (clientY - startY);
+        elmnt.style.height = `${Math.max(newHeight, 300)}px`;
+      }
+
+      function stopResize() {
+        document.documentElement.onmousemove = null;
+        document.documentElement.onmouseup = null;
+        document.documentElement.ontouchmove = null;
+        document.documentElement.ontouchend = null;
+      }
+    }
+
     let elements = document.getElementsByClassName('window');
     for (let element of elements) {
       dragElement(element);
+      resizeElement(element);
     }
   }, []);
 
@@ -110,6 +157,8 @@ export default function Window(variables) {
         className='window__content'>
         { variables.content }
       </div>
+      <div className="resizer resizer--right" />
+      <div className="resizer resizer--bottom" />
     </section>
   );
 }
