@@ -1,0 +1,22 @@
+@use '../../0-global/variables' as *;
+
+.word {
+  margin: -24px;
+  padding: 16px 24px;
+  background-color: #888;
+  container-type: inline-size;
+  container-name: word;
+
+  .word__doc {
+    max-width: 1000px;
+    padding: 48px;
+    margin: 0 auto;
+    background-color: $color-white;
+    box-shadow: 10px 10px $color-black;
+    border: 2px solid $color-black;
+
+    @container word (max-width: 600px) {
+      padding: 24px;
+    }
+  }
+}

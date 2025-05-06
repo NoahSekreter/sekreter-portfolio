@@ -1,12 +1,6 @@
 @use '../../0-global/variables' as *;
 
 .position {
-  &[open] {
-    .position__summary {
-      background-color: #d0e7ec;
-    }
-  }
-
   span {
     display: block;
   }
@@ -95,5 +89,21 @@
 
   p:last-of-type {
     margin-bottom: 0;
+  }
+
+  &[open] {
+    .position__summary {
+      background-color: #d0e7ec;
+    }
+
+    svg {
+      &.envelope {
+        display: none;
+      }
+
+      &.envelope-open {
+        display: block;
+      }
+    }
   }
 }
