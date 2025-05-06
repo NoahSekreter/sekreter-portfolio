@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sekreter-portfolio/static/css/main.e18d2282.css",
-    "main.js": "/sekreter-portfolio/static/js/main.62d5bf77.js",
-    "static/media/headshot.jpg": "/sekreter-portfolio/static/media/headshot.d00baa12fa149ac3d036.jpg",
-    "static/media/SekreterResume2025.pdf": "/sekreter-portfolio/static/media/SekreterResume2025.adec677f38a71d149d5b.pdf",
+    "main.css": "/sekreter-portfolio/static/css/main.d9bd04df.css",
+    "main.js": "/sekreter-portfolio/static/js/main.2ed1a975.js",
+    "static/media/headshot-2025.JPG": "/sekreter-portfolio/static/media/headshot-2025.2a7e4480c39df7c0caaa.JPG",
+    "static/media/SekreterResume2025.pdf": "/sekreter-portfolio/static/media/SekreterResume2025.1bc9199f2d6ee0716fdd.pdf",
     "index.html": "/sekreter-portfolio/index.html",
     "static/media/hills-2.svg": "/sekreter-portfolio/static/media/hills-2.b001f16efa3475cbea74.svg",
     "static/media/hills-1.svg": "/sekreter-portfolio/static/media/hills-1.d1683661c4c0ebe490c8.svg",
     "static/media/hills-3.svg": "/sekreter-portfolio/static/media/hills-3.5872971fdde1492e7083.svg",
-    "main.e18d2282.css.map": "/sekreter-portfolio/static/css/main.e18d2282.css.map",
-    "main.62d5bf77.js.map": "/sekreter-portfolio/static/js/main.62d5bf77.js.map"
+    "main.d9bd04df.css.map": "/sekreter-portfolio/static/css/main.d9bd04df.css.map",
+    "main.2ed1a975.js.map": "/sekreter-portfolio/static/js/main.2ed1a975.js.map"
   },
   "entrypoints": [
-    "static/css/main.e18d2282.css",
-    "static/js/main.62d5bf77.js"
+    "static/css/main.d9bd04df.css",
+    "static/js/main.2ed1a975.js"
   ]
 }
