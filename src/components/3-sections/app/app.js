@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './app.scss';
 import Window from '../../2-blocks/window/window.js';
 import EmailCanvas from '../../2-blocks/email-canvas/email-canvas.js';
-import Headshot from './headshot.jpg';
+import Headshot from './headshot-2025.JPG';
 import Resume from './SekreterResume2025.pdf';
 import Scroller from '../../1-elements/scroller/scroller.js';
 
