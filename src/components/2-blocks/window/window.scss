@@ -152,19 +152,6 @@
       line-height: 20px;
       margin-bottom: 8px;
     }
-
-    article {
-      display: block;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(55, 55, 55, 0.5);
-      margin-bottom: 8px;
-
-      &:last-of-type {
-        padding-bottom: 0;
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-    }
   }
 
   .window__links {

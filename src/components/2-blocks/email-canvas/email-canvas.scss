@@ -1,0 +1,97 @@
+@use '../../0-global/variables' as *;
+
+.email-canvas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: -24px;
+  container-type: inline-size;
+  container-name: emails;
+
+  .email-canvas__full-width {
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-gray-border;
+    padding: 4px 12px;
+    background-color: #dce3e4;
+
+    h2 {
+      width: 100%;
+      padding: 0;
+      border: none;
+      margin: 0;
+    }
+
+    svg {
+      margin-left: 6px;
+      width: 10px;
+    }
+  }
+
+  .email-canvas__emails {
+    flex-basis: 30%;
+    flex-grow: 1;
+    border-right: 2px solid $color-gray-border;
+  }
+
+  .email-canvas__canvas {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 12px;
+
+    div {
+      flex-basis: calc(50% - 4px);
+    }
+
+    .company {
+      font-weight: 700;
+    }
+
+    .dates {
+      text-align: right;
+    }
+
+    .title {
+      flex-basis: 100%;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    > p {
+      flex-basis: 100%;
+      line-height: 1.4;
+    }
+  }
+
+  @container emails (max-width: 760px) {
+    flex-direction: column;
+
+    .email-canvas__canvas {
+      display: none;
+    }
+
+    .email-canvas__emails {
+      border-right: none;
+    }
+  }
+
+  .easter-egg {
+    cursor: pointer;
+    background-color: $color-sky;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid $color-night;
+    padding: 8px 12px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-night;
+      color: $color-white;
+    }
+  }
+}

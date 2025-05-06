@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './app.scss';
 import Window from '../../2-blocks/window/window.js';
-import Position from '../../1-elements/position/position.js';
+import EmailCanvas from '../../2-blocks/email-canvas/email-canvas.js';
 import Headshot from './headshot.jpg';
 import Resume from './SekreterResume2025.pdf';
 import Scroller from '../../1-elements/scroller/scroller.js';
@@ -195,7 +195,6 @@ export default function App() {
             </p>
             <img src={ Headshot } alt="A headshot of Noah Sekreter"/>
             <figcaption>A headshot of Noah Sekreter</figcaption>
-            <p><a href="#totally-not-a-virus-bro-trust-me" onClick={ createBlueScreen }>Oh what have we here? A single link hidden away? How peculiar...</a></p>
           </>
         }
       />
@@ -204,34 +203,9 @@ export default function App() {
         title="Work Experience"
         id="work-experience"
         hidden="true"
-        styles= { { top: '76px', left: '76px' } }
-        content={
-          <>
-            <h2>Work Experience</h2>
-            <Position company="Sandstorm Design"
-              title="Front-end web developer" dates="January 2022 - March 2025"
-              content={
-                <p>Developed numerous websites under an Agile environment, primarily focusing on 
-                Drupal and Wordpress based-projects, with occasional front-end work in .NET 
-                frameworks such as Sitecore or Sitefinity. Contributed to establishing and 
-                improving front-end build tools utilising Webpack, Vite, and ESlint. 
-                Performed maintenance on a variety of sites, addressing accessibility compliance, 
-                security vulnerabilities, and site performance.</p>
-              } />
-            <Position company="BBG Inc."
-              title="Account Manager / Software Developer" dates="March 2019 - June 2021"
-              content={
-                <p>Performed data entry and record keeping of several companies and their employees.
-                Developed Python software to automate Excel-based medical censuses and integration
-                to both the Smartsheets API and Healthcare.gov Marketplace API.</p>
-              } />
-            <Position company="Cleveland Hardware & Forging"
-              title="Front-end Web Developer" dates="November 2017 - August 2019"
-              content={
-                <p>Updated and maintained the company website, rebuilding it from the ground up.</p>
-              } />
-          </>
-        }
+        styles= { { top: '76px', left: '76px', width: '1000px' } }
+        content={ <EmailCanvas
+          inheritFunc={ createBlueScreen } /> }
       />
 
       <Window

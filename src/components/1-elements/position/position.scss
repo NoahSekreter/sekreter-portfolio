@@ -1,9 +1,82 @@
 @use '../../0-global/variables' as *;
 
 .position {
+  &[open] {
+    .position__summary {
+      background-color: #d0e7ec;
+    }
+  }
+
   span {
     display: block;
-    margin-bottom: 4px;
+  }
+
+  .position__summary {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 12px;
+    border-bottom: 1px solid $color-gray-border;
+    cursor: pointer;
+
+    > * {
+      pointer-events: none;
+    }
+
+    &::marker,
+    &::-webkit-details-marker {
+      content: '';
+      display: none;
+    }  
+
+    svg {
+      width: 16px;
+      margin-right: 6px;
+
+      &.envelope {
+        display: block;
+      }
+
+      &.envelope-open {
+        display: none;
+      }
+    }
+
+    div {
+      .position__title {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .position__contents {
+    display: none;
+    border-bottom: 1px solid $color-gray-border;
+    padding: 8px 12px 8px 32px;
+    background-color: $color-white;
+
+    .company {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    @container emails (max-width: 760px) {
+      display: block;
+    }
   }
 
   .position__company {
