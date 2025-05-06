@@ -186,8 +186,14 @@ export default function App() {
               <h3>This Website! (2021, 2025)</h3>
               <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. This site has been built utilizing React,
                 and as of 2025 it has received a new site overhaul to show off the improvements I have made as a developer.</p>
-              <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, React</b></p>
+              <p><b>Created Using: HTML, SCSS, JavaScript, React</b></p>
               <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button" rel="noreferrer" target="_blank" aria-label="Visit this website's GitHub repo">Github Page</a>
+            </article>
+            <article>
+              <h3>ASPPH (2025)</h3>
+              <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
+              <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS, JavaScript, PHP, ACF, Figma</b></p>
+              <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
             </article>
             <article>
               <h3>MJHS (2024-2025)</h3>
@@ -196,10 +202,10 @@ export default function App() {
               <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS website">Website</a>
             </article>
             <article>
-              <h3>ASPPH (2025)</h3>
-              <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
-              <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS, JavaScript, PHP, ACF, Figma</b></p>
-              <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
+              <h3>AIAG (2024)</h3>
+              <p>Worked in a team with the client to develop the various components of the site utilizing Storybook. The designs began in Figma, and where developed piece-by-piece to be handed off to their client's dev team for backend implementation.</p>
+              <p><b>Created Using: Twig, SCSS, JavaScript, React, Storybook, Figma</b></p>
+              <a href="https://www.aiag.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit AIAG website">Website</a>
             </article>
             <article>
               <h3>UNICEF USA (2023-2024)</h3>
