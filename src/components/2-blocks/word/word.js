@@ -1,5 +1,5 @@
 import React from 'react';
-import Headshot from './headshot-2025.JPG';
+import Headshot from './headshot-2025-compressed.JPG';
 import './word.scss';
 
 export default function Word() {

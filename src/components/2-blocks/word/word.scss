@@ -7,6 +7,10 @@
   container-type: inline-size;
   container-name: word;
 
+  @media screen and (max-width: 760px) {
+    padding: 16px;
+  }
+
   .word__doc {
     max-width: 1000px;
     padding: 48px;
@@ -17,6 +21,7 @@
 
     @container word (max-width: 600px) {
       padding: 24px;
+      box-shadow: 5px 5px $color-black;
     }
   }
 }

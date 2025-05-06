@@ -58,26 +58,42 @@ export default function App() {
     }
   ]); 
 
+  // Establish a trigger checker, as StrictMode React sometimes double-runs a function (For whatever cursed reason)
+  let BlueScreenTrigger = useRef(false);
   function createBlueScreen() {
+    if (BlueScreenTrigger.current) return;
+    BlueScreenTrigger.current = true;
+
     const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 600, 1000]; // ms
   
     function triggerComponent(index) {
+      if (window.innerWidth <= 760) {  
+        document.querySelectorAll('.window').forEach(element => { element.style.display = 'none'; });        
+      }
+  
       if (index < delays.length) {
         setTimeout(() => {
+          // Use functional update to get latest error windows
+          let nextWindow;
+
           setErrorWindows(prevErrors => {
             if (prevErrors.length > 0) {
-              const [nextWindow, ...remaining] = prevErrors;
-              // Queue this one for rendering
-              setActiveErrors(prev => [...prev, nextWindow]);
-              // Return updated remaining windows
-              return remaining;
+              [nextWindow, ...prevErrors] = prevErrors;
+              return prevErrors; // return remaining errors
             } else {
-              // No more errors, trigger blue screen
-              document.getElementsByClassName('blue-screen')[0].classList.add('active');
+              document.querySelector('.blue-screen')?.classList.add('active');
               return prevErrors;
             }
           });
-  
+
+          if (nextWindow) {
+            setActiveErrors(prev => {
+              // Prevent accidental duplicates
+              if (prev.find(win => win.title === nextWindow.title)) return prev;
+              return [...prev, nextWindow];
+            });
+          }
+
           triggerComponent(index + 1);
         }, delays[index]);
       }

@@ -28,33 +28,34 @@
       $color-white 100%) no-repeat 0 100vh / 100%;
   }
 
-  @media (prefers-dark-interface) {
-    &::before {
-      background: radial-gradient(
-        ellipse 300% 50% at 50% 100%,
-        #202a33 0%,
-        #0d2d52 40%,
-        #07192e 50%,
-        #101924 60%,
-        #101616 90%,
-        $color-black 100%) no-repeat 0 100vh / 100%;
-    }
+  // @media (prefers-dark-interface) {
+  //   &::before {
+  //     background: radial-gradient(
+  //       ellipse 300% 50% at 50% 100%,
+  //       #202a33 0%,
+  //       #0d2d52 40%,
+  //       #07192e 50%,
+  //       #101924 60%,
+  //       #101616 90%,
+  //       $color-black 100%) no-repeat 0 100vh / 100%;
+  //   }
 
-    .window {
-      .window__content {
-        background-color: #101924;
-        color: $color-white;
+  //   .window {
+  //     .window__content {
+  //       background-color: #101924;
+  //       color: $color-white;
 
-        a {
-          color: $color-white;
-        }
-      }
-    }
-  }
+  //       a {
+  //         color: $color-white;
+  //       }
+  //     }
+  //   }
+  // }
 
   @media screen and (max-width: 760px) {
     overflow-y: scroll;
     height: 100%;
+    min-height: 100vh;
     background-position: 0 0, 0 0, 0 0;
     padding-bottom: 16px;
 
