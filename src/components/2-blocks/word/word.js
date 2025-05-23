@@ -8,26 +8,33 @@ export default function Word() {
       <div className='word__doc'>
         <h2>About Me</h2>
         <p>
-          Born in Germany and raised in the states, I am a web developer of 5 years experience
-          with experience in the HTML, CSS, SASS/SCSS, JavaScript, jQuery, C#, and PHP languages to build and 
-          maintain websites, as well as Drupal, Wordpress, .NET, and React as content management systems
-          and development frameworks.
+          Born in Germany and raised in the United States, I am a web developer of 5 years experience
+          having worked in primarily the Cleveland and Chicago areas in Full-Stack web and software development.
         </p>
         <p>
-          Not only that, but I also have experience with various development tools from mySQL, 
-          DDEV, Docker, ESLint, Webpack, Vite, Composer, NodeJS, and Storybook.
+          The programming languages I use in my projects include HTML,
+          CSS, JavaScript, C#, PHP, Python, and SQL.
         </p>
         <p>
-          Additionally, I have some experience with Python as well, which I used for software development,
-          creating distributable software to automate excel-based filing and connecting to a number of RESTful
-          APIs to retrieve data from a number of sources.
+          For development tools and frameworks, I utilize SASS/SCSS, jQuery, Bootstrap, NodeJS,
+          DDEV, Docker, RESTful APIs, ESLint, Webpack, Vite, Composer, Storybook,
+          .NET, Drupal, WordPress, and React.
         </p>
         <p>
-          My hobbies include board games and tabletop roleplaying games such as Dungeons & Dragons and the
-          Warhammer 40k TTRPGs. Not only do I write lots of homebrew, but I even write my own systems 
-          (<a href="https://mega.nz/file/uQo23ZoK#joD8bj81R55vksFhyCURfAgd8kI5LH69ykp_bAmbZYA" rel="noreferrer" target="_blank">
-          Click here to check it out, if you're interested</a>)! I also enjoy playing video games and reading manga in my free time.
-        </p><br />
+          Some fun facts about me:
+        </p>
+        <p>
+          <ul>
+            <li>I have an ACT score of 32 in STEM fields, placing me in the 97th percentile.</li>
+            <li>I dabbled in 3D programming.</li>
+            <li>I work with Windows, iOS, and Linux-based (Ubuntu, Mint, and Manjaro) operating systems.</li>
+            <li>I speak entry-level German and a very small amount of Turkish.</li>
+            <li>As a hobby of mine I play and create tabletop roleplaying games like Dungeons & Dragons or the Warhammer 40k TTRPG's.</li>
+            <li>My favorite video games are Noita, Dwarf Fortress, and Metal Gear Rising.</li>
+            <li>I have an interest in historical arms and armor and like to collect swords.</li>
+          </ul>
+        </p>
+        <br />
         <img src={ Headshot } alt="A headshot of Noah Sekreter"/>
         <figcaption>A headshot of Noah Sekreter</figcaption>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './app.scss';
 import Scroller from '../../1-elements/scroller/scroller.js';
+import Card from '../../1-elements/card/card.js';
 import Window from '../../2-blocks/window/window.js';
 import EmailCanvas from '../../2-blocks/email-canvas/email-canvas.js';
 import Word from '../../2-blocks/word/word.js';
@@ -13,50 +14,158 @@ export default function App() {
   const [, setErrorWindows] = useState([
     {
       title: 'ERROR: Unknown Software',
-      content: <p><b>ERROR</b><br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</p>,
+      content: <div className='window__base'><b>ERROR</b><br /><br />Broken software detected. Your software may be broken or corrupted, please update your software to be compatible with your operating system.</div>,
       styles: { top: '100px', left: '500px' }
     },
     {
       title: 'ERROR: system32 modified',
-      content: <p><b>ERROR</b><br /><br />A change has been detected within system32. Please revert changes before continuing.</p>,
+      content: <div className='window__base'><b>ERROR</b><br /><br />A change has been detected within system32. Please revert changes before continuing.</div>,
       styles: { top: '50px', left: '150px' }
     },
     {
       title: 'ERROR: f00-3214-DI1230',
-      content: <p>2134-2134324 546-GE7008f dsaf324 124 2141234 21asfasfd afdsaf</p>,
+      content: <div className='window__base'>2134-2134324 546-GE7008f dsaf324 124 2141234 21asfasfd afdsaf</div>,
       styles: { top: '150px', left: '300px' }
     },
     {
       title: 'limewire',
-      content: <p>Download free music at limewire HD quality free no virus listen to top songs free HD now</p>,
+      content: <div className='window__base'>Download free music at limewire HD quality free no virus listen to top songs free HD now</div>,
       styles: { top: '280px', left: '10px' }
     },
     {
       title: 'Seriously?',
-      content: <p>Weren't you taught not to click on suspicious links?</p>,
+      content: <div className='window__base'>Weren't you taught not to click on suspicious links?</div>,
       styles: { top: '330px', left: '250px' }
     },
     {
       title: 'FREE ANTIVIRUS',
-      content: <p>DOWNLOAD FREE ANTIVIRUS TODAY! PROTECT YOUR DATA FROM INTERNET THREATS NOW!</p>,
+      content: <div className='window__base'>DOWNLOAD FREE ANTIVIRUS TODAY! PROTECT YOUR DATA FROM INTERNET THREATS NOW!</div>,
       styles: { top: '80px', left: '670px' }
     },
     {
       title: 'ERROR: ',
-      content: <p><b>ERROR</b><br /><br />o no</p>,
+      content: <div className='window__base'><b>ERROR</b><br /><br />o no</div>,
       styles: { top: '400px', left: '630px' }
     },
     {
       title: 'ERROR: DANGEROUS SOFTWARE DETECTED!',
-      content: <p><b>ERROR</b><br /><br />DANGEROUS SOFTWARE DETECTED! SEND YOUR CREDIT CARD INFORMATION TO thisisafakeemail@hotmail.com IMMEDIATELY!!!!!!</p>,
+      content: <div className='window__base'><b>ERROR</b><br /><br />DANGEROUS SOFTWARE DETECTED! SEND YOUR CREDIT CARD INFORMATION TO thisisafakeemail@hotmail.com IMMEDIATELY!!!!!!</div>,
       styles: { top: '410px', left: '80px' }
     },
     {
       title: 'ERROR: Aw Dang It',
-      content: <p>Well, it's been an honor gentlemen...</p>,
+      content: <div className='window__base'>Well, it's been an honor gentlemen...</div>,
       styles: { top: '220px', left: '580px' }
     }
-  ]); 
+  ]);
+
+  const importAll = (r) => {
+    let images = {};
+    r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  };
+  
+  const cardImages = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
+  const [cardContent, ] = useState([
+    {
+      title: 'This Website!',
+      subtitle: '2021, 2025',
+      background: cardImages['banner-portfolio.jpg'],
+      content: (
+        <>
+          <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. This site has been built utilizing React,
+            and as of 2025 it has received a new site overhaul to show off the improvements I have made as a developer.</p>
+          <p><b>Created Using: HTML, SCSS, JavaScript, React, Webpack</b></p>
+          <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button" rel="noreferrer" target="_blank" aria-label="Visit this website's GitHub repo">Github Page</a>
+        </>
+      )
+    },
+    {
+      title: 'ASPPH',
+      subtitle: '2025',
+      background: cardImages['banner-aspph.jpg'],
+      content: (
+        <>
+          <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
+          <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS, JavaScript, PHP, ACF, Figma</b></p>
+          <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
+        </>
+      )
+    },
+    {
+      title: 'AIAG',
+      subtitle: '2025',
+      background: cardImages['banner-aiag.jpg'],
+      content: (
+        <>
+          <p>Collaborated in a team to rebuild a website, utilizing Storybook as the primary development tool to create, organize, and test the components developed for the site.</p>
+          <p><b>Created Using: Timber/Twig, SCSS, JavaScript, Storybook, Figma</b></p>
+          <a href="https://www.aiag.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit AIAG website">Website</a>
+        </>
+      )
+    },
+    {
+      title: 'MJHS (Main & Elderplan)',
+      subtitle: '2023 - 2025',
+      background: cardImages['banner-mjhs-org.jpg'],
+      content: (
+        <>
+          <p>Modernized a large portion of the site as part of a team-wide site refresh project, working primarily on homepage and mega-menu enhancements.</p>
+          <p><b>Created Using: Wordpress, CSS, SASS, JavaScript, PHP, ACF, Figma</b></p>
+          <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS main website">Main Website</a>
+          <a href="https://www.elderplan.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS Eldeprlan website">Elderplan Website</a>
+        </>
+      )
+    },
+    {
+      title: 'UNICEF USA',
+      subtitle: '2023 - 2024',
+      background: cardImages['banner-unicef.jpg'],
+      content: (
+        <>
+          <p>Part of a team handling continuous maintenance and improvement, I have handled various Drupal block updates and page hero enhancements</p>
+          <p><b>Created Using: Drupal, Twig, CSS, SCSS, JavaScript, jQuery, PHP, YML, Layout Builder, Figma</b></p>
+          <a href="https://unicefusa.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit UNICEF USA website">Website</a>
+        </>
+      )
+    },
+    {
+      title: 'CenFill',
+      subtitle: '2019',
+      background: cardImages['banner-cenfill.jpg'],
+      content: (
+        <>
+          <p>During my time at BBG, I have taught myself Python in order to automate the company's workflow. I have created a program, which I distributed among the company, that allows a user to automate filling out Excel spreadsheets. Over time, this program evolved to include <a href="https://smartsheet.redoc.ly/">Smartsheets API</a> and <a href="https://developer.cms.gov/marketplace-api/">Marketplace API</a> integration.</p>
+          <p><b>Created Using: Python, Smartsheets API, Marketplace API</b></p>
+          <a href="https://github.com/NoahSekreter/CenFill" className="button" rel="noreferrer" target="_blank" aria-label="Visit the CenFill Github repo">Github Page</a>
+        </>
+      )
+    },
+    {
+      title: 'Cleveland Hardware',
+      subtitle: '2017-2019',
+      background: cardImages['banner-cleveland-hardware.jpg'],
+      content: (
+        <>
+          <p>After attending WeCan{'{Code}'}It, I was brought on to Cleveland Hardware to rebuild their old website, including adding an eCommerce system.</p>
+          <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, PHP</b></p>
+          <a href="https://clevelandhardware.com/" className="button" rel="noreferrer" target="_blank" aria-label="Website no longer available">Website (No Longer Available)</a>
+        </>
+      )
+    },
+    {
+      title: 'Lucky Paws',
+      subtitle: '2017',
+      background: cardImages['banner-lucky-paws.jpg'],
+      content: (
+        <>
+          <p>During my time at Stream9 I have updated the site homepage and the list of animals available for adoption.</p>
+          <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, PHP</b></p>
+          <a href="https://luckypawsrescue.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit Lucky Paws website">Website</a>
+        </>
+      )
+    },
+  ])
 
   // Establish a trigger checker, as StrictMode React sometimes double-runs a function (For whatever cursed reason)
   let BlueScreenTrigger = useRef(false);
@@ -154,21 +263,23 @@ export default function App() {
       <Window
         title="Summary"
         id="summary"
-        styles= { { left: '16px' } }
+        styles= { { left: '16px', height: '450px' } }
         content={
           <>
-            <div className='window__title'>
-              <h1>Noah Sekreter</h1>
-              <div className='h3'>Front-End Web Developer</div>
-            </div>
-            <Scroller />
-            <p><b>Current Career Status: Available for employment, looking for a Web Developer position in the Chicago area if onsite, or
-              a remote position anywhere.</b></p>
-            <div className='window__links'>
-              <a rel="noreferrer" href={ Resume } target='_blank'>View Resume</a>
-              <a rel="noreferrer" href="https://github.com/NoahSekreter" target='_blank'>View GitHub</a>
-              <a rel="noreferrer" href="https://www.linkedin.com/in/sekreter" target='_blank'>View LinkedIn</a>
-              <a rel="noreferrer" href="mailto:nsekreter@gmail.com" target='_blank'>E-Mail me at nsekreter@gmail.com</a>  
+            <div className='window__base'>
+              <div className='window__title'>
+                <h1>Noah Sekreter</h1>
+                <div className='h3'>Front-End Web Developer</div>
+              </div>
+              <Scroller />
+              <p><b>Current Career Status: Available for employment, looking for a Web Developer position in the Chicago area if onsite, or
+                a remote position anywhere.</b></p>
+              <div className='window__links'>
+                <a rel="noreferrer" href={ Resume } target='_blank'>View Resume</a>
+                <a rel="noreferrer" href="https://github.com/NoahSekreter" target='_blank'>View GitHub</a>
+                <a rel="noreferrer" href="https://www.linkedin.com/in/sekreter" target='_blank'>View LinkedIn</a>
+                <a rel="noreferrer" href="mailto:nsekreter@gmail.com" target='_blank'>E-Mail me at nsekreter@gmail.com</a>  
+              </div>
             </div>
           </>
         }
@@ -186,7 +297,7 @@ export default function App() {
         title="Work Experience"
         id="work-experience"
         hidden="true"
-        styles= { { top: '76px', left: '76px', width: '1000px' } }
+        styles= { { top: '76px', left: '76px', height: '450px', width: '1000px' } }
         content={ <EmailCanvas inheritFunc={ createBlueScreen } /> }
       />
 
@@ -194,53 +305,11 @@ export default function App() {
         title="Portfolio"
         id="portfolio"
         hidden="true"
-        styles= { { top: '106px', left: '106px' } }
+        styles= { { top: '106px', left: '106px', height: '400px' } }
         content={
           <>
-            <h2>Portfolio</h2>
-            <article>
-              <h3>This Website! (2021, 2025)</h3>
-              <p>My personal website, used for displaying the projects I have created as well as showing off any skills I have recently picked up. This site has been built utilizing React,
-                and as of 2025 it has received a new site overhaul to show off the improvements I have made as a developer.</p>
-              <p><b>Created Using: HTML, SCSS, JavaScript, React</b></p>
-              <a href="https://github.com/NoahSekreter/NoahSekreter.github.io" className="button" rel="noreferrer" target="_blank" aria-label="Visit this website's GitHub repo">Github Page</a>
-            </article>
-            <article>
-              <h3>ASPPH (2025)</h3>
-              <p>A more recent project that I was involved in, this is a Wordpress-based environemnt utilizing component-driven Agile-sprints for an updated Homepage</p>
-              <p><b>Created Using: Wordpress, Timber/Twig, CSS, SCSS, JavaScript, PHP, ACF, Figma</b></p>
-              <a href="https://aspph.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit ASPPH website">Website</a>
-            </article>
-            <article>
-              <h3>MJHS (2024-2025)</h3>
-              <p>Modernized a large portion of the site as part of a team-wide site refresh project, working primarily on homepage and mega-menu enhancements.</p>
-              <p><b>Created Using: Wordpress, CSS, SASS, JavaScript, PHP, ACF, Figma</b></p>
-              <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS website">Website</a>
-            </article>
-            <article>
-              <h3>AIAG (2024)</h3>
-              <p>Worked in a team with the client to develop the various components of the site utilizing Storybook. The designs began in Figma, and where developed piece-by-piece to be handed off to their client's dev team for backend implementation.</p>
-              <p><b>Created Using: Twig, SCSS, JavaScript, React, Storybook, Figma</b></p>
-              <a href="https://www.aiag.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit AIAG website">Website</a>
-            </article>
-            <article>
-              <h3>UNICEF USA (2023-2024)</h3>
-              <p>Part of a team handling continuous maintenance and improvement, I have handled various Drupal block updates and page hero enhancements</p>
-              <p><b>Created Using: Drupal, Twig, CSS, SCSS, JavaScript, jQuery, PHP, YML, Layout Builder, Figma</b></p>
-              <a href="https://unicefusa.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit UNICEF USA website">Website</a>
-            </article>
-            <article>
-              <h3>CenFill (2019)</h3>
-              <p>During my time at BBG, I have taught myself Python in order to automate the company's workflow. I have created a program, which I distributed among the company, that allows a user to automate filling out Excel spreadsheets. Over time, this program evolved to include <a href="https://smartsheet.redoc.ly/">Smartsheets API</a> and <a href="https://developer.cms.gov/marketplace-api/">Marketplace API</a> integration.</p>
-              <p><b>Created Using: Python, Smartsheets API, Marketplace API</b></p>
-              <a href="https://github.com/NoahSekreter/CenFill" className="button" rel="noreferrer" target="_blank"  aria-label="Visit the CenFill Github repo">Github Page</a>
-            </article>
-            <article>
-              <h3>Cleveland Hardware & Forging (2018)</h3>
-              <p>After attending WeCan{'{Code}'}It, I was brought on to Cleveland Hardware to rebuild their old website, including adding a PHP email form to submit quotes.</p>
-              <p><b>Created Using: HTML, CSS, SCSS, JavaScript, jQuery, PHP</b></p>
-              <a href="https://clevelandhardware.com/" className="button">Website (No Longer Available)</a>
-            </article>
+            {/* <h2>Portfolio</h2> */}
+            { cardContent.map((item, i) => ( <Card key={i} title={item.title} subtitle={item.subtitle} background={item.background} content={item.content}/> ))}
           </>
         }
       />

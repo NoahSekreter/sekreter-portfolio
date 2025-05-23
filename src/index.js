@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './components/0-global/global.scss'
 import App from './components/3-sections/app/app.js';
 import Toolbar from './components/3-sections/toolbar/toolbar.js';
-import BlueScreen from './components/2-blocks/blue-screen/blue-screen.js';
+import BlueScreen from './components/3-sections/blue-screen/blue-screen.js';
 // import reportWebVitals from './templates/reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
