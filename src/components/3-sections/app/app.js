@@ -112,7 +112,7 @@ export default function App() {
         <>
           <p>Modernized a large portion of the site as part of a team-wide site refresh project, working primarily on homepage and mega-menu enhancements.</p>
           <p><b>Created Using: Wordpress, CSS, SASS, JavaScript, PHP, ACF, Figma</b></p>
-          <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS main website">Main Website</a>
+          <a href="https://www.mjhs.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS main website">Main Website</a><br />
           <a href="https://www.elderplan.org/" className="button" rel="noreferrer" target="_blank" aria-label="Visit MJHS Eldeprlan website">Elderplan Website</a>
         </>
       )
