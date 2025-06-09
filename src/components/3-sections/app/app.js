@@ -5,7 +5,7 @@ import Card from '../../1-elements/card/card.js';
 import Window from '../../2-blocks/window/window.js';
 import EmailCanvas from '../../2-blocks/email-canvas/email-canvas.js';
 import Word from '../../2-blocks/word/word.js';
-import Resume from './SekreterResume2025.pdf';
+import Resume from './SekreterResume2025-1.pdf';
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState('');
@@ -64,7 +64,7 @@ export default function App() {
     r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
     return images;
   };
-  
+
   const cardImages = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
   const [cardContent, ] = useState([
     {
