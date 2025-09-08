@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './window.scss';
 
 export default function Window(variables) {  
   const [isLoaded, setIsLoaded] = useState('');
+  const windowRef = useRef(null);
+  const [isHidden, setIsHidden] = useState(variables.hidden);
 
   const setActiveWindow = (e) => {
     let windows = document.getElementsByClassName("window");
@@ -129,23 +131,23 @@ export default function Window(variables) {
   useEffect(() => {
     setIsLoaded('initializing');
 
-    const initTimer = setTimeout(() => { setIsLoaded('initialized'); }, 3750);
-
-    let elements = document.getElementsByClassName('window');
-    for (let element of elements) {
-      dragElement(element);
-      resizeElement(element);
-    }
+    const initTimer = setTimeout(() => {
+      setIsLoaded('initialized');
+      dragElement(windowRef.current);
+      resizeElement(windowRef.current);
+      if (windowRef.current.classList.contains('active')) { setIsHidden(false); }
+    }, 2500);
 
     return () => clearTimeout(initTimer);
-  }, []);
+  }, [isHidden, variables.hidden]);
 
   return (
     <section
+      ref={ windowRef }
       id={ variables.id }
       onMouseDown={(e) => setActiveWindow(e)}
       onTouchStart={(e) => setActiveWindow(e)}
-      className={['window', (variables.hidden ? 'hidden' : 'active'), isLoaded].join(' ')}
+      className={['window', (isHidden ? 'hidden' : 'active'), isLoaded].join(' ')}
       style={ variables.styles }>
       <div className='window__top'>
         <span>{ variables.title }</span>

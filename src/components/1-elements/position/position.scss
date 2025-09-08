@@ -91,11 +91,7 @@
     margin-bottom: 0;
   }
 
-  &[open] {
-    .position__summary {
-      background-color: #d0e7ec;
-    }
-
+  &.read {
     svg {
       &.envelope {
         display: none;
@@ -103,6 +99,20 @@
 
       &.envelope-open {
         display: block;
+      }
+    }
+
+    .position__summary div .position__title {
+      font-weight: 500;
+    }
+  }
+
+  &[open] {
+    .position__summary {
+      background-color: #d0e7ec;
+
+      div .position__title {
+        font-weight: 900;
       }
     }
   }

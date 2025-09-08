@@ -29,9 +29,12 @@ export default function EmailCanvas({ inheritFunc }) {
       title:"Account Manager / Software Developer",
       dates: "March 2019 - June 2021",
       content: (
-        <p>Performed data entry and record keeping of several companies and their employees.
-        Developed Python software to automate Excel-based medical censuses and integration
-        to both the Smartsheets API and Healthcare.gov Marketplace API.</p>
+        <>
+          <p>Performed data entry and record keeping of several companies and their employees.
+          Developed Python software to automate Excel-based medical censuses and integration
+          to both the Smartsheets API and Healthcare.gov Marketplace API, followed by employee
+          training and establishing software updating.</p>
+        </>
       )
     },
     {
@@ -40,7 +43,7 @@ export default function EmailCanvas({ inheritFunc }) {
       title:"Web Developer",
       dates: "November 2017 - August 2019",
       content: (
-        <p>Updated and maintained the company website, rebuilding it from the ground up.</p>
+        <p>Updated and maintained the company website, rebuilding it from the ground up. Managed record keeping in an ERP system.</p>
       )
     },
     {
@@ -90,7 +93,9 @@ export default function EmailCanvas({ inheritFunc }) {
       emailContent[0].content
     ]);
 
-    document.querySelectorAll('.position')[0].setAttribute('open', true);
+    const firstPosition = document.querySelectorAll('.position')[0];
+    firstPosition.setAttribute('open', true);
+    firstPosition.classList.add('read');
 
     const handleClick = (e) => {
       e.preventDefault();
@@ -100,7 +105,10 @@ export default function EmailCanvas({ inheritFunc }) {
       allDetails.forEach((detail) => detail.removeAttribute('open'));
 
       const clickedDetail = e.target.closest('details');
-      if (clickedDetail) {clickedDetail.setAttribute('open', true); }
+      if (clickedDetail) {
+        clickedDetail.setAttribute('open', true);
+        clickedDetail.classList.add('read');
+      }
 
       if (detailID) { setActiveEmail([
         emailContent[detailID].title,

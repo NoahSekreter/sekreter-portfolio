@@ -21,19 +21,26 @@ export default function Word() {
           .NET, Drupal, WordPress, and React.
         </p>
         <p>
-          Some fun facts about me:
+          I have experience working in Agile environments, using Jira for project management. I have worked
+          in environments with multiple development teams in CI/CD pipelines, using Git and GitHub for version control.
+          I have also worked as a solo developer on projects, including client communication, project management, and employee training.
         </p>
         <p>
-          <ul>
-            <li>I have an ACT score of 32 in STEM fields, placing me in the 97th percentile.</li>
-            <li>I dabbled in 3D programming.</li>
-            <li>I work with Windows, iOS, and Linux-based (Ubuntu, Mint, and Manjaro) operating systems.</li>
-            <li>I speak entry-level German and a very small amount of Turkish.</li>
-            <li>As a hobby of mine I play and create tabletop roleplaying games like Dungeons & Dragons or the Warhammer 40k TTRPG's.</li>
-            <li>My favorite video games are Noita, Dwarf Fortress, and Metal Gear Rising.</li>
-            <li>I have an interest in historical arms and armor and like to collect swords.</li>
-          </ul>
+          Currently, I have been enjoying working with JS frameworks such as React and Angular, as well as studying
+          web scraping through Selenium via Python or studying server management & security.
         </p>
+        <p>
+          Some fun facts about me:
+        </p>
+        <ul>
+          <li>I have an ACT score of 32 in STEM fields, placing me in the 97th percentile.</li>
+          <li>I dabbled in 3D programming and game development.</li>
+          <li>I work with Windows, iOS, and Linux-based (Ubuntu, Mint, Manjaro, & CentOS) operating systems.</li>
+          <li>I speak entry-level German and a very small amount of Turkish.</li>
+          <li>As a hobby of mine I play tabletop roleplaying games like Dungeons & Dragons or the Warhammer 40,000 TTRPGs, as well as create my own TTRPG systems.</li>
+          <li>My favorite video games are Noita, Dwarf Fortress, and Metal Gear Rising. I also enjoy modding games and have experimented with creating my own mods.</li>
+          <li>I have an interest in historical arms and armor and like to collect swords.</li>
+        </ul>
         <br />
         <img src={ Headshot } alt="A headshot of Noah Sekreter"/>
         <figcaption>A headshot of Noah Sekreter</figcaption>
