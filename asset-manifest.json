@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sekreter-portfolio/static/css/main.c8b9f867.css",
-    "main.js": "/sekreter-portfolio/static/js/main.36770027.js",
+    "main.js": "/sekreter-portfolio/static/js/main.a25c47af.js",
     "static/media/headshot-2025-compressed.JPG": "/sekreter-portfolio/static/media/headshot-2025-compressed.fcdf8bd209656480bd5b.JPG",
     "static/media/banner-aiag.jpg": "/sekreter-portfolio/static/media/banner-aiag.44c5d6022a9587335b0c.jpg",
     "static/media/banner-unicef.jpg": "/sekreter-portfolio/static/media/banner-unicef.7a04c2973acbc2bbd011.jpg",
@@ -9,7 +9,7 @@
     "static/media/banner-cleveland-hardware.jpg": "/sekreter-portfolio/static/media/banner-cleveland-hardware.0df16dd8873b9c838ed8.jpg",
     "static/media/banner-aspph.jpg": "/sekreter-portfolio/static/media/banner-aspph.5efaf25ff5e652831335.jpg",
     "static/media/banner-lucky-paws.jpg": "/sekreter-portfolio/static/media/banner-lucky-paws.a038cfc2ff4cf4359976.jpg",
-    "static/media/SekreterResume2025-1.pdf": "/sekreter-portfolio/static/media/SekreterResume2025-1.96072b990914aa02ed55.pdf",
+    "static/media/SekreterResume2025.pdf": "/sekreter-portfolio/static/media/SekreterResume2025.a120af90181ed32cbb23.pdf",
     "static/media/banner-portfolio.jpg": "/sekreter-portfolio/static/media/banner-portfolio.6fa1fab7c3692d238817.jpg",
     "static/media/banner-cenfill.jpg": "/sekreter-portfolio/static/media/banner-cenfill.900758fcec0a3dbbc5eb.jpg",
     "index.html": "/sekreter-portfolio/index.html",
@@ -17,10 +17,10 @@
     "static/media/hills-1.svg": "/sekreter-portfolio/static/media/hills-1.d1683661c4c0ebe490c8.svg",
     "static/media/hills-3.svg": "/sekreter-portfolio/static/media/hills-3.5872971fdde1492e7083.svg",
     "main.c8b9f867.css.map": "/sekreter-portfolio/static/css/main.c8b9f867.css.map",
-    "main.36770027.js.map": "/sekreter-portfolio/static/js/main.36770027.js.map"
+    "main.a25c47af.js.map": "/sekreter-portfolio/static/js/main.a25c47af.js.map"
   },
   "entrypoints": [
     "static/css/main.c8b9f867.css",
-    "static/js/main.36770027.js"
+    "static/js/main.a25c47af.js"
   ]
 }
