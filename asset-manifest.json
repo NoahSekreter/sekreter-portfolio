@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sekreter-portfolio/static/css/main.7683a5db.css",
+    "main.css": "/sekreter-portfolio/static/css/main.e219991c.css",
     "main.js": "/sekreter-portfolio/static/js/main.698d5a24.js",
     "static/media/headshot-2025-compressed.JPG": "/sekreter-portfolio/static/media/headshot-2025-compressed.fcdf8bd209656480bd5b.JPG",
     "static/media/banner-aiag.jpg": "/sekreter-portfolio/static/media/banner-aiag.44c5d6022a9587335b0c.jpg",
@@ -16,11 +16,11 @@
     "static/media/hills-2.svg": "/sekreter-portfolio/static/media/hills-2.b001f16efa3475cbea74.svg",
     "static/media/hills-1.svg": "/sekreter-portfolio/static/media/hills-1.d1683661c4c0ebe490c8.svg",
     "static/media/hills-3.svg": "/sekreter-portfolio/static/media/hills-3.5872971fdde1492e7083.svg",
-    "main.7683a5db.css.map": "/sekreter-portfolio/static/css/main.7683a5db.css.map",
+    "main.e219991c.css.map": "/sekreter-portfolio/static/css/main.e219991c.css.map",
     "main.698d5a24.js.map": "/sekreter-portfolio/static/js/main.698d5a24.js.map"
   },
   "entrypoints": [
-    "static/css/main.7683a5db.css",
+    "static/css/main.e219991c.css",
     "static/js/main.698d5a24.js"
   ]
 }
