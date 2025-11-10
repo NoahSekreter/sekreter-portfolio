@@ -31,16 +31,18 @@
 
   /* Frutiger Aero */
   button {
-    --bg: oklch(60% 0.32 240 / 0.8);
-    --bg-dark: oklch(30% 0.32 240 / 0.75);
+    --bg: oklch(52.86% 0.17863 255.729 / 0.8);
+    --bg-dark: oklch(31.167% 0.21601 264.073 / 0.75);
     --bottom-glow: radial-gradient(
       farthest-corner at bottom center,
-      rgba(255, 255, 255, .4),
+      rgba(255, 255, 255, .2),
       transparent
     );
 
     cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 14px;
     position: relative;
     transition: all 300ms ease;
@@ -68,8 +70,8 @@
       height: 40%;
       background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.1)
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0)
       );
       border-radius: inherit;
       transition: background 400ms ease;
