@@ -28,7 +28,7 @@ export default function Scroller() {
   }, []);
 
   return (
-    <div className="carousel" ref={scrollerRef}>
+    <div className="carousel" ref={scrollerRef} tabIndex={-1}>
       <span>HTML5, Twig/Timber, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, Drupal, Wordpress, mySQL, Python, Storybook, Webpack, Vite, ESLint, Agile SCRUM, C#, MVC, ASP.NET -&nbsp;</span>
       <span>HTML5, Twig/Timber, CSS, SASS/SCSS, Bootstrap, JavaScript, jQuery, React, PHP, Drupal, Wordpress, mySQL, Python, Storybook, Webpack, Vite, ESLint, Agile SCRUM, C#, MVC, ASP.NET -&nbsp;</span>
     </div>

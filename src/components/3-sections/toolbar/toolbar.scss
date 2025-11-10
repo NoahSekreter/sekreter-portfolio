@@ -4,8 +4,20 @@
   width: 100vw;
   height: 40px;
   background:
-    linear-gradient(rgba(163, 226, 255, 0.3) 0%, rgba(69, 187, 255, 0.1) 50%, transparent 75%),
-    #005279;
+  linear-gradient(
+    rgba(163, 226, 255, 0.35) 0%,
+    rgba(69, 187, 255, 0.15) 50%,
+    transparent 85%
+  ),
+  linear-gradient(
+    125deg,
+    transparent 65%,
+    rgba(255, 255, 255, 0.2) 72%,
+    transparent 78%,
+    rgba(255, 255, 255, 0.1) 83%,
+    transparent 90%
+  ),
+  #002079;
   display: flex;
   gap: 4px;
   padding: 4px 24px 4px 60px;
@@ -17,53 +29,75 @@
     display: none;
   }
 
+  /* Frutiger Aero */
   button {
-    cursor: pointer;
-    background: 
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1) 30%),
-      rgb(0, 37, 71);
-    border: none;
-    border-radius: 8px;
-    color: $color-white;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    padding: 4px 12px;
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    --bg: oklch(60% 0.32 240 / 0.8);
+    --bg-dark: oklch(30% 0.32 240 / 0.75);
+    --bottom-glow: radial-gradient(
+      farthest-corner at bottom center,
+      rgba(255, 255, 255, .4),
+      transparent
+    );
 
-    &:hover,
-    &:focus-within {
-      background:
-        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 40%),
-        rgb(0, 70, 136);
+    cursor: pointer;
+    display: flex;
+    gap: 14px;
+    position: relative;
+    transition: all 300ms ease;
+    background-color: var(--bg);
+    background: var(--bottom-glow), linear-gradient(to bottom, var(--bg-dark), var(--bg));
+    border: 1px solid var(--bg);
+    border-radius: 9999px;
+    padding: 0.25em 1.5em;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    color: $color-white;
+    // font-family: "Lucida Grande", "Lucida Sans Unicode", "Segoe UI", system-ui, sans-serif;
+    font-weight: 700;
+    text-shadow: 0 2px 0.5em rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    user-select: none;
+    -webkit-user-select: none;
+
+    /* Top Highlight Effect */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2%;
+      left: 0.75em;
+      width: calc(100% - 1.5em);
+      height: 40%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.1)
+      );
+      border-radius: inherit;
+      transition: background 400ms ease;
+      pointer-events: none;
     }
 
-    &:active {
-      background:
-        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 60%),
-        rgb(0, 28, 53);
+    /* Hover State */
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      transform: translateY(-1px);
     }
 
     svg {
       fill: $color-white;
       width: 14px;
-      margin-right: 8px;
     }
 
     &.toolbar__main {
       position: absolute;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
       left: 5px;
       bottom: 5px;
       padding: 8px;
 
       svg {
-        width: 24px;
-        margin-right: 0;
+        width: 32px;
+        padding: 0 2px;
       }
     }
   }

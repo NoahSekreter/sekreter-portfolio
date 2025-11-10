@@ -8,32 +8,34 @@ export default function EmailCanvas({ inheritFunc }) {
   const emailContent = [
     {
       id: 0,
-      company: "Sandstorm Design",
-      title:"Front-end web developer",
-      dates: "January 2022 - March 2025",
-      content: (
-        <>
-        <p>Developed numerous websites under an Agile environment, focusing on 
-          Drupal and Wordpress based-projects, with occasional front-end work in .NET 
-          frameworks such as Sitecore or Sitefinity. Contributed to establishing and improving
-          front-end build tools utilizing Webpack, Vite, ESlint, & Storybook, building designs
-          from Figma. Established local environments with DDEV & Docker.</p>
-        <p>Performed maintenance on a variety of sites, addressing accessibility compliance, 
-          security vulnerabilities, and site performance.</p>
-        </>
-      )
-    },
-    {
-      id: 1,
       company: "BBG Inc.",
       title:"Account Manager / Software Developer",
-      dates: "March 2019 - June 2021",
+      dates: "March 2019 - June 2021 / October 2025 - Present",
       content: (
         <>
           <p>Performed data entry and record keeping of several companies and their employees.
           Developed Python software to automate Excel-based medical censuses and integration
           to both the Smartsheets API and Healthcare.gov Marketplace API, followed by employee
           training and establishing software updating.</p>
+          <p>As of 2025, I have continued in a contracting role to provide further enhancements 
+          to the software that I have developed, including GUI improvements and performance optimizations.</p>
+        </>
+      )
+    },
+    {
+      id: 1,
+      company: "Sandstorm Design",
+      title:"Front-end web developer",
+      dates: "January 2022 - March 2025",
+      content: (
+        <>
+        <p>Developed numerous websites under an Agile environment, focusing on 
+        Drupal and Wordpress based-projects, with occasional front-end work in .NET 
+        frameworks such as Sitecore or Sitefinity. Contributed to establishing and improving
+        front-end build tools utilizing Webpack, Vite, ESlint, & Storybook, building designs
+        from Figma. Established local environments with DDEV & Docker.</p>
+        <p>Performed maintenance on a variety of sites, addressing accessibility compliance, 
+        security vulnerabilities, and site performance.</p>
         </>
       )
     },

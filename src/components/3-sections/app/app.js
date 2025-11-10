@@ -131,13 +131,15 @@ export default function App() {
     },
     {
       title: 'CenFill',
-      subtitle: '2019',
+      subtitle: '2019 / 2025',
       background: cardImages['banner-cenfill.jpg'],
       content: (
         <>
-          <p>During my time at BBG, I have taught myself Python in order to automate the company's workflow. I have created a program, which I distributed among the company, that allows a user to automate filling out Excel spreadsheets. Over time, this program evolved to include <a href="https://smartsheet.redoc.ly/">Smartsheets API</a> and <a href="https://developer.cms.gov/marketplace-api/">Marketplace API</a> integration.</p>
+          <p>During my time at BBG, I have taught myself Python in order to automate the company's workflow. I have created a program, which I 
+            distributed among the company, that allows a user to automate  filling out Excel spreadsheets. Over time, this program evolved to 
+            include <a href="https://smartsheet.redoc.ly/">Smartsheets API</a> and <a href="https://developer.cms.gov/marketplace-api/">Marketplace API</a> integration.
+            As of 2025, this program has received an overhaul with visual improvements from tkboostrap and performance improvements via multithreading.</p>
           <p><b>Created Using: Python, Smartsheets API, Marketplace API</b></p>
-          <a href="https://github.com/NoahSekreter/CenFill" className="button" rel="noreferrer" target="_blank" aria-label="Visit the CenFill Github repo">Github Page</a>
         </>
       )
     },
@@ -269,11 +271,12 @@ export default function App() {
             <div className='window__base'>
               <div className='window__title'>
                 <h1>Noah Sekreter</h1>
-                <div className='h3'>Front-End Web Developer</div>
+                <div className='h3'>Front-End Web & Software Developer</div>
               </div>
               <Scroller />
-              <p><b>Current Career Status: Available for employment, looking for a Web Developer position in the Chicago area if onsite, or
-                a remote position anywhere.</b></p>
+              <p><b>Current Career Status: Working as a contractor. Available for additional employment as part-time,
+                full-time, or contracting as a Web Developer or Software Developer. Able to work remotely as well as
+                onsite in the northern Chicago area.</b></p>
               <div className='window__links'>
                 <a rel="noreferrer" href={ Resume } target='_blank'>View Resume</a>
                 <a rel="noreferrer" href="https://github.com/NoahSekreter" target='_blank'>View GitHub</a>
