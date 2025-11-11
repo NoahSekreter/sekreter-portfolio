@@ -134,6 +134,15 @@ export default function EmailCanvas({ inheritFunc }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const changeActiveEmail = (e, direction) => {
+    // Find the .position that has the open attribute set to true
+    const openPosition = emailRef.current.querySelector('.position[open]');
+    const newPosition = direction === 'next' ? openPosition.nextSibling : openPosition.previousSibling;
+    if (newPosition && newPosition.classList.contains('position')) {
+      newPosition.querySelector('.position__summary').click();
+    }
+  };
+
   return (
     <div className='email-canvas' ref={emailRef}>
       <div className="email-canvas__full-width">
@@ -141,12 +150,20 @@ export default function EmailCanvas({ inheritFunc }) {
       </div>
       <div className="email-canvas__full-width">
         <span>Messages 1-6 of 6</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>
+        <button
+          onClick={(e) => changeActiveEmail(e, "prev")}
+          aria-label="Prevous Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg>
+        </button>
+        <button
+          onClick={(e) => changeActiveEmail(e, "next")}
+          aria-label="Next Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>
+        </button>
       </div>
       <div className='email-canvas__emails'>
         {emailContent.map(email => (
-          <Position key={email.id} company={ email.company } id={ email.id }
+          <Position key={ email.id } company={ email.company } id={ email.id }
             title={ email.title } dates={ email.dates }
             content={ email.content } />
         ))}

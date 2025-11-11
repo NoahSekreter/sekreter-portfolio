@@ -9,14 +9,15 @@ export default function Word() {
         <h2>About Me</h2>
         <p>
           Born in Germany and raised in the United States, I am a web developer of 5 years experience
-          having worked in primarily the Cleveland and Chicago areas in Full-Stack web and software development.
+          and a software developer of 2 years experience, having worked in primarily the Cleveland and
+          Chicago areas in full-stack web and software development.
         </p>
         <p>
           The programming languages I use in my projects include HTML,
           CSS, JavaScript, C#, PHP, Python, and SQL.
         </p>
         <p>
-          For development tools and frameworks, I utilize SASS/SCSS, jQuery, Bootstrap, NodeJS,
+          For web development tools and frameworks, I utilize SASS/SCSS, jQuery, Bootstrap, NodeJS,
           DDEV, Docker, RESTful APIs, ESLint, Webpack, Vite, Composer, Storybook,
           .NET, Drupal, WordPress, and React.
         </p>
@@ -27,7 +28,8 @@ export default function Word() {
         </p>
         <p>
           Currently, I have been enjoying working with JS frameworks such as React and Angular, as well as studying
-          web scraping through Selenium via Python or studying server management & security.
+          web scraping through Selenium via Python or studying server management & security. As of 2025, I have also been
+          studying for the Linux+ CompTIA certification to further my knowledge of Linux server administration.
         </p>
         <p>
           Some fun facts about me:

@@ -175,7 +175,7 @@ export default function App() {
     if (BlueScreenTrigger.current) return;
     BlueScreenTrigger.current = true;
 
-    const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 600, 1000]; // ms
+    const delays = [100, 3500, 2800, 2000, 1200, 1000, 800, 600, 600, 1200]; // ms
   
     function triggerComponent(index) {
       if (window.innerWidth <= 760) {  
